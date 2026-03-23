@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!-- saved from url=(0219)file:///Users/hannah/Library/Application%20Support/Claude/local-agent-mode-sessions/753c59d5-b5f3-4474-bc3e-365fcda0d13c/f22e5294-a9d0-477e-9f28-77b2ee0f5443/local_d06d5b40-33cd-416f-9ed1-a9c9d06d59ce/outputs/index.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zeyro | Financial Promotion Learning Hub</title>
 <style>
@@ -894,10 +894,10 @@
   ::-webkit-scrollbar-thumb:hover { background: var(--accent-dim); }
 </style>
 </head>
-<body class="light">
+<body>
 
 <!-- Mobile Toggle -->
-<button class="mobile-toggle" onclick="document.querySelector(&#39;.sidebar&#39;).classList.toggle(&#39;open&#39;)">☰</button>
+<button class="mobile-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">&#9776;</button>
 
 <!-- Sidebar -->
 <nav class="sidebar">
@@ -908,31 +908,31 @@
   <div class="sidebar-nav">
 
     <div class="nav-section">
-      <div class="nav-section-header expanded" onclick="toggleNav(this)" data-page="home">
-        <span>⬥</span> Overview
+      <div class="nav-section-header active expanded" onclick="toggleNav(this)" data-page="home">
+        <span>&#11045;</span> Overview
       </div>
     </div>
 
     <!-- Crypto -->
     <div class="nav-section">
       <div class="nav-section-header expanded" onclick="toggleNav(this)">
-        <span>◆</span> Crypto
-        <span class="arrow">▸</span>
+        <span>&#9670;</span> Crypto
+        <span class="arrow">&#9656;</span>
       </div>
       <div class="nav-items open">
-        <div class="nav-item" data-page="crypto-web" onclick="showPage(&#39;crypto-web&#39;, this)">
+        <div class="nav-item" data-page="crypto-web" onclick="showPage('crypto-web', this)">
           Web Reviews <span class="nav-badge soon">Soon</span>
         </div>
-        <div class="nav-item" data-page="crypto-appstore" onclick="showPage(&#39;crypto-appstore&#39;, this)">
+        <div class="nav-item" data-page="crypto-appstore" onclick="showPage('crypto-appstore', this)">
           App Store Reviews <span class="nav-badge live">Live</span>
         </div>
-        <div class="nav-item" data-page="crypto-app" onclick="showPage(&#39;crypto-app&#39;, this)">
+        <div class="nav-item" data-page="crypto-app" onclick="showPage('crypto-app', this)">
           App Reviews <span class="nav-badge soon">Soon</span>
         </div>
-        <div class="nav-item" data-page="crypto-social" onclick="showPage(&#39;crypto-social&#39;, this)">
+        <div class="nav-item" data-page="crypto-social" onclick="showPage('crypto-social', this)">
           Social Media Reviews <span class="nav-badge soon">Soon</span>
         </div>
-        <div class="nav-item active" data-page="crypto-onboarding" onclick="showPage(&#39;crypto-onboarding&#39;, this)">
+        <div class="nav-item active" data-page="crypto-onboarding" onclick="showPage('crypto-onboarding', this)">
           Onboarding Frictions <span class="nav-badge live">Live</span>
         </div>
       </div>
@@ -941,20 +941,20 @@
     <!-- Funds -->
     <div class="nav-section">
       <div class="nav-section-header" onclick="toggleNav(this)">
-        <span>◇</span> Funds
-        <span class="arrow">▸</span>
+        <span>&#9671;</span> Funds
+        <span class="arrow">&#9656;</span>
       </div>
       <div class="nav-items">
-        <div class="nav-item" data-page="funds-factsheets" onclick="showPage(&#39;funds-factsheets&#39;, this)">
+        <div class="nav-item" data-page="funds-factsheets" onclick="showPage('funds-factsheets', this)">
           Fact Sheets <span class="nav-badge soon">Soon</span>
         </div>
-        <div class="nav-item" data-page="funds-prospectus" onclick="showPage(&#39;funds-prospectus&#39;, this)">
+        <div class="nav-item" data-page="funds-prospectus" onclick="showPage('funds-prospectus', this)">
           Prospectus / Supplements <span class="nav-badge soon">Soon</span>
         </div>
-        <div class="nav-item" data-page="funds-presentations" onclick="showPage(&#39;funds-presentations&#39;, this)">
+        <div class="nav-item" data-page="funds-presentations" onclick="showPage('funds-presentations', this)">
           Presentations <span class="nav-badge soon">Soon</span>
         </div>
-        <div class="nav-item" data-page="funds-quarterly" onclick="showPage(&#39;funds-quarterly&#39;, this)">
+        <div class="nav-item" data-page="funds-quarterly" onclick="showPage('funds-quarterly', this)">
           Quarterly Commentary <span class="nav-badge soon">Soon</span>
         </div>
       </div>
@@ -963,32 +963,34 @@
     <!-- CETN -->
     <div class="nav-section">
       <div class="nav-section-header" onclick="toggleNav(this)">
-        <span>△</span> CETN
-        <span class="arrow">▸</span>
+        <span>&#9651;</span> CETN
+        <span class="arrow">&#9656;</span>
       </div>
       <div class="nav-items">
-        <div class="nav-item" data-page="cetn-overview" onclick="showPage(&#39;cetn-overview&#39;, this)">
+        <div class="nav-item" data-page="cetn-overview" onclick="showPage('cetn-overview', this)">
           Overview <span class="nav-badge soon">Soon</span>
         </div>
       </div>
     </div>
   </div>
   <div class="theme-toggle" onclick="toggleTheme()">
-    <span class="theme-toggle-icon" id="themeIcon">☾</span>
-    <span id="themeLabel">Dark Mode</span>
+    <span class="theme-toggle-icon" id="themeIcon">&#9788;</span>
+    <span id="themeLabel">Light Mode</span>
   </div>
 </nav>
 
 <!-- Main Content -->
 <main class="main">
   <div class="topbar">
-    <div class="breadcrumb" id="breadcrumb">Financial Promotions <span>›</span> Crypto <span>›</span> <span class="current">Back-End Frictions Compliance</span></div>
+    <div class="breadcrumb" id="breadcrumb">
+      Financial Promotions <span>&#8250;</span> <span class="current">Overview</span>
+    </div>
   </div>
 
   <div class="content-area">
 
     <!-- HOME PAGE -->
-    <div class="page" id="page-home">
+    <div class="page active" id="page-home">
       <div class="hero-section fade-in">
         <div class="hero-title">
           The Guide to<br><span class="highlight">Financial Promotions</span><br>Compliance
@@ -999,23 +1001,23 @@
       </div>
 
       <div class="category-cards">
-        <div class="category-card" onclick="showPage(&#39;crypto-onboarding&#39;, document.querySelector(&#39;[data-page=crypto-onboarding]&#39;))">
-          <div class="card-icon">◆</div>
+        <div class="category-card" onclick="showPage('crypto-onboarding', document.querySelector('[data-page=crypto-onboarding]'))">
+          <div class="card-icon">&#9670;</div>
           <div class="card-title">Cryptoasset Promotions</div>
           <div class="card-desc">
             Back-end frictions, onboarding flows, risk warnings, and client categorisation requirements under PS23/6 and COBS 4.12A.
           </div>
           <div class="card-items">
             <span class="card-item-tag">Web Reviews</span>
-            <span class="card-item-tag active">App Store ✓</span>
+            <span class="card-item-tag active">App Store &#10003;</span>
             <span class="card-item-tag">App Reviews</span>
             <span class="card-item-tag">Social Media</span>
-            <span class="card-item-tag active">Onboarding Frictions ✓</span>
+            <span class="card-item-tag active">Onboarding Frictions &#10003;</span>
           </div>
         </div>
 
-        <div class="category-card" onclick="showPage(&#39;funds-factsheets&#39;, document.querySelector(&#39;[data-page=funds-factsheets]&#39;))">
-          <div class="card-icon">◇</div>
+        <div class="category-card" onclick="showPage('funds-factsheets', document.querySelector('[data-page=funds-factsheets]'))">
+          <div class="card-icon">&#9671;</div>
           <div class="card-title">Fund Promotions</div>
           <div class="card-desc">
             Fact sheets, prospectus supplements, presentations, and quarterly commentary compliance guides.
@@ -1028,8 +1030,8 @@
           </div>
         </div>
 
-        <div class="category-card" onclick="showPage(&#39;cetn-overview&#39;, document.querySelector(&#39;[data-page=cetn-overview]&#39;))">
-          <div class="card-icon">△</div>
+        <div class="category-card" onclick="showPage('cetn-overview', document.querySelector('[data-page=cetn-overview]'))">
+          <div class="card-icon">&#9651;</div>
           <div class="card-title">CETN</div>
           <div class="card-desc">
             Compliance guidance for CETN-related financial promotions and regulatory requirements.
@@ -1042,8 +1044,8 @@
     </div>
 
     <!-- ONBOARDING FRICTIONS PAGE -->
-    <div class="page active" id="page-crypto-onboarding">
-      <div class="page-header fade-in" style="">
+    <div class="page" id="page-crypto-onboarding">
+      <div class="page-header fade-in">
         <div class="page-label">Cryptoasset Promotions</div>
         <div class="page-title">Back-End Frictions Compliance</div>
         <p class="page-intro">
@@ -1051,30 +1053,30 @@
         </p>
       </div>
 
-      <div class="key-points fade-in" style="">
-        <div class="key-point"><span class="kp-icon">⬥</span> Pre-investment safeguards required by the FCA</div>
-        <div class="key-point"><span class="kp-icon">⬥</span> Introduced under PS23/6</div>
-        <div class="key-point"><span class="kp-icon">⬥</span> Codified across COBS 4.12A and COBS 10A</div>
+      <div class="key-points fade-in">
+        <div class="key-point"><span class="kp-icon">&#11045;</span> Pre-investment safeguards required by the FCA</div>
+        <div class="key-point"><span class="kp-icon">&#11045;</span> Introduced under PS23/6</div>
+        <div class="key-point"><span class="kp-icon">&#11045;</span> Codified across COBS 4.12A and COBS 10A</div>
       </div>
 
       <div class="callout rule" style="margin-bottom:36px;">
         <div class="callout-label">What These Frictions Ensure</div>
         <ul style="list-style:none; padding:0; margin:0;">
-          <li style="padding:5px 0; color:var(--text-body); font-size:16px;">› The consumer is suitable (via categorisation)</li>
-          <li style="padding:5px 0; color:var(--text-body); font-size:16px;">› The product is appropriate (via assessment)</li>
-          <li style="padding:5px 0; color:var(--text-body); font-size:16px;">› The decision is considered (via delay mechanisms)</li>
+          <li style="padding:5px 0; color:var(--text-body); font-size:16px;">&#8250; The consumer is suitable (via categorisation)</li>
+          <li style="padding:5px 0; color:var(--text-body); font-size:16px;">&#8250; The product is appropriate (via assessment)</li>
+          <li style="padding:5px 0; color:var(--text-body); font-size:16px;">&#8250; The decision is considered (via delay mechanisms)</li>
         </ul>
       </div>
 
       <!-- SECTION 1: Cooling-Off Period -->
       <div class="section-block open" id="sec1">
-        <div class="section-header" onclick="toggleSection(&#39;sec1&#39;)">
+        <div class="section-header" onclick="toggleSection('sec1')">
           <div class="section-number">1</div>
           <div class="section-title-group">
             <div class="section-title">Cooling-Off Period</div>
             <div class="section-ref">COBS 4.12A.18R</div>
           </div>
-          <div class="section-toggle">▾</div>
+          <div class="section-toggle">&#9662;</div>
         </div>
         <div class="section-content">
           <div class="section-body">
@@ -1122,8 +1124,8 @@
                   <p><strong style="color:var(--text-white);">Your 24-hour period is complete</strong></p>
                   <p>You can now choose whether to continue with your investment journey.</p>
                   <div style="margin-top:20px">
-                    <div class="ui-button-equal">➔ Continue to Invest</div>
-                    <div class="ui-button-equal">✖ Leave — I don't want to invest</div>
+                    <div class="ui-button-equal">&#10132; Continue to Invest</div>
+                    <div class="ui-button-equal">&#10006; Leave &#8212; I don't want to invest</div>
                   </div>
                   <div class="equal-note">Both options must be equally prominent in size, colour, and placement</div>
                 </div>
@@ -1142,13 +1144,13 @@
 
       <!-- SECTION 2: Personalised Risk Warning -->
       <div class="section-block" id="sec2">
-        <div class="section-header" onclick="toggleSection(&#39;sec2&#39;)">
+        <div class="section-header" onclick="toggleSection('sec2')">
           <div class="section-number">2</div>
           <div class="section-title-group">
             <div class="section-title">Personalised Risk Warning</div>
             <div class="section-ref">COBS 4.12A.20R</div>
           </div>
-          <div class="section-toggle">▾</div>
+          <div class="section-toggle">&#9662;</div>
         </div>
         <div class="section-content">
           <div class="section-body">
@@ -1176,8 +1178,8 @@
             <div class="callout tip">
               <div class="callout-label">Display Tip</div>
               <ul style="list-style:none; padding:0; margin:0;">
-                <li style="padding:4px 0;">› Use bold text, bright colours, or a pop-up to meet prominence standards.</li>
-                <li style="padding:4px 0;">› Log client views and acknowledgements for auditing.</li>
+                <li style="padding:4px 0;">&#8250; Use bold text, bright colours, or a pop-up to meet prominence standards.</li>
+                <li style="padding:4px 0;">&#8250; Log client views and acknowledgements for auditing.</li>
               </ul>
             </div>
           </div>
@@ -1186,13 +1188,13 @@
 
       <!-- SECTION 3: Client Categorisations -->
       <div class="section-block" id="sec3">
-        <div class="section-header" onclick="toggleSection(&#39;sec3&#39;)">
+        <div class="section-header" onclick="toggleSection('sec3')">
           <div class="section-number">3</div>
           <div class="section-title-group">
             <div class="section-title">Client Categorisations</div>
             <div class="section-ref">COBS 4.12A.21R</div>
           </div>
-          <div class="section-toggle">▾</div>
+          <div class="section-toggle">&#9662;</div>
         </div>
         <div class="section-content">
           <div class="section-body">
@@ -1200,7 +1202,7 @@
 
             <div class="sub-label green">Two Options</div>
             <ul>
-              <li><strong style="color:var(--text-white)">High Net-Worth Investor Statement:</strong> Net assets &gt; £250k or income &gt; £100k.</li>
+              <li><strong style="color:var(--text-white)">High Net-Worth Investor Statement:</strong> Net assets > &#163;250k or income > &#163;100k.</li>
               <li><strong style="color:var(--text-white)">Restricted Investor Statement:</strong> &lt;10% net assets in high-risk investments.</li>
             </ul>
 
@@ -1226,30 +1228,30 @@
             <table class="comparison-table">
               <thead>
                 <tr>
-                  <th class="good">✓ Good Practice (FCA Observed)</th>
-                  <th class="bad">✗ Poor Practice (FCA Observed)</th>
+                  <th class="good">&#10003; Good Practice (FCA Observed)</th>
+                  <th class="bad">&#10007; Poor Practice (FCA Observed)</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><span class="check">✓</span> Verbatim FCA statement text displayed in full (Annex 2 or Annex 5) — not summarised</td>
-                  <td><span class="cross">✗</span> Paraphrasing or simplifying the Annex statements</td>
+                  <td><span class="check">&#10003;</span> Verbatim FCA statement text displayed in full (Annex 2 or Annex 5) — not summarised</td>
+                  <td><span class="cross">&#10007;</span> Paraphrasing or simplifying the Annex statements</td>
                 </tr>
                 <tr>
-                  <td><span class="check">✓</span> Separate, distinct journeys for each investor type</td>
-                  <td><span class="cross">✗</span> Providing only one investor category option</td>
+                  <td><span class="check">&#10003;</span> Separate, distinct journeys for each investor type</td>
+                  <td><span class="cross">&#10007;</span> Providing only one investor category option</td>
                 </tr>
                 <tr>
-                  <td><span class="check">✓</span> Income/asset declaration fields for High Net Worth journey</td>
-                  <td><span class="cross">✗</span> Coaching the user toward a particular category answer</td>
+                  <td><span class="check">&#10003;</span> Income/asset declaration fields for High Net Worth journey</td>
+                  <td><span class="cross">&#10007;</span> Coaching the user toward a particular category answer</td>
                 </tr>
                 <tr>
-                  <td><span class="check">✓</span> Neutral screening question that does not coach users</td>
-                  <td><span class="cross">✗</span> No documentation or record of categorisation decisions</td>
+                  <td><span class="check">&#10003;</span> Neutral screening question that does not coach users</td>
+                  <td><span class="cross">&#10007;</span> No documentation or record of categorisation decisions</td>
                 </tr>
                 <tr>
-                  <td><span class="check">✓</span> Declarations stored with audit trail for compliance review</td>
-                  <td><span class="cross">✗</span> Allowing a user to proceed without completing categorisation</td>
+                  <td><span class="check">&#10003;</span> Declarations stored with audit trail for compliance review</td>
+                  <td><span class="cross">&#10007;</span> Allowing a user to proceed without completing categorisation</td>
                 </tr>
               </tbody>
             </table>
@@ -1259,13 +1261,13 @@
 
       <!-- SECTION 4: Appropriateness Assessment -->
       <div class="section-block" id="sec4">
-        <div class="section-header" onclick="toggleSection(&#39;sec4&#39;)">
+        <div class="section-header" onclick="toggleSection('sec4')">
           <div class="section-number">4</div>
           <div class="section-title-group">
             <div class="section-title">Appropriateness Assessment</div>
             <div class="section-ref">COBS 4.12A.27G / COBS 10 Annex 1</div>
           </div>
-          <div class="section-toggle">▾</div>
+          <div class="section-toggle">&#9662;</div>
         </div>
         <div class="section-content">
           <div class="section-body">
@@ -1335,13 +1337,13 @@
 
       <!-- SECTION 5: Monitoring, Compliance and Reporting Process -->
       <div class="section-block" id="sec5">
-        <div class="section-header" onclick="toggleSection(&#39;sec5&#39;)">
+        <div class="section-header" onclick="toggleSection('sec5')">
           <div class="section-number">5</div>
           <div class="section-title-group">
             <div class="section-title">Monitoring, Compliance and Reporting Process</div>
             <div class="section-ref">Ongoing Obligation</div>
           </div>
-          <div class="section-toggle">▾</div>
+          <div class="section-toggle">&#9662;</div>
         </div>
         <div class="section-content">
           <div class="section-body">
@@ -1358,10 +1360,10 @@
               <div class="callout-label">Why It Matters</div>
               These non-optional back-end frictions demonstrate that a firm is:
               <ul style="list-style:none; padding:0; margin:10px 0 0;">
-                <li style="padding:4px 0; font-size:16px;">› Not onboarding recklessly</li>
-                <li style="padding:4px 0; font-size:16px;">› Taking steps to educate clients</li>
-                <li style="padding:4px 0; font-size:16px;">› Preventing harmful behaviour</li>
-                <li style="padding:4px 0; font-size:16px;">› Compliant with FCA's requirements for cryptoasset promotions</li>
+                <li style="padding:4px 0; font-size:16px;">&#8250; Not onboarding recklessly</li>
+                <li style="padding:4px 0; font-size:16px;">&#8250; Taking steps to educate clients</li>
+                <li style="padding:4px 0; font-size:16px;">&#8250; Preventing harmful behaviour</li>
+                <li style="padding:4px 0; font-size:16px;">&#8250; Compliant with FCA's requirements for cryptoasset promotions</li>
               </ul>
             </div>
           </div>
@@ -1370,13 +1372,13 @@
 
       <!-- SECTION 6: Compliance Checklist -->
       <div class="section-block" id="sec6">
-        <div class="section-header" onclick="toggleSection(&#39;sec6&#39;)">
-          <div class="section-number">☑</div>
+        <div class="section-header" onclick="toggleSection('sec6')">
+          <div class="section-number">&#9745;</div>
           <div class="section-title-group">
             <div class="section-title">Back-End Frictions Checklist</div>
             <div class="section-ref">Interactive — Track Your Compliance</div>
           </div>
-          <div class="section-toggle">▾</div>
+          <div class="section-toggle">&#9662;</div>
         </div>
         <div class="section-content">
           <div class="section-body">
@@ -1486,7 +1488,7 @@
     <div class="page" id="page-crypto-web">
       <div class="page-header"><div class="page-label">Cryptoasset Promotions</div><div class="page-title">Web Reviews</div></div>
       <div class="placeholder-content">
-        <div class="placeholder-icon">🌐</div>
+        <div class="placeholder-icon">&#127760;</div>
         <div class="placeholder-title">Coming Soon</div>
         <div class="placeholder-desc">Compliance guidance for cryptoasset web promotions and website review requirements will be available here.</div>
       </div>
@@ -1502,9 +1504,9 @@
       </div>
 
       <div class="key-points fade-in">
-        <div class="key-point"><span class="kp-icon">⬥</span> Two areas: App Store Description &amp; App Store Visuals</div>
-        <div class="key-point"><span class="kp-icon">⬥</span> FCA prescribed risk warning required</div>
-        <div class="key-point"><span class="kp-icon">⬥</span> Approval time stamp mandatory</div>
+        <div class="key-point"><span class="kp-icon">&#11045;</span> Two areas: App Store Description &amp; App Store Visuals</div>
+        <div class="key-point"><span class="kp-icon">&#11045;</span> FCA prescribed risk warning required</div>
+        <div class="key-point"><span class="kp-icon">&#11045;</span> Approval time stamp mandatory</div>
       </div>
 
       <div class="callout rule" style="margin-bottom:36px;">
@@ -1513,39 +1515,39 @@
           <div>
             <strong style="color:var(--text-white);">App Store Description</strong>
             <ul style="list-style:none; padding:0; margin:8px 0 0;">
-              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">› Risk Warning Banner</li>
-              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">› Approval Time Stamp</li>
-              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">› Balancing Language / Asset-Specific Risks</li>
-              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">› Regulatory Framing</li>
-              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">› Substantiation &amp; Clarity</li>
-              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">› Sensitive Words</li>
+              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">&#8250; Risk Warning Banner</li>
+              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">&#8250; Approval Time Stamp</li>
+              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">&#8250; Balancing Language / Asset-Specific Risks</li>
+              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">&#8250; Regulatory Framing</li>
+              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">&#8250; Substantiation &amp; Clarity</li>
+              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">&#8250; Sensitive Words</li>
             </ul>
           </div>
           <div>
             <strong style="color:var(--text-white);">App Store Visuals</strong>
             <ul style="list-style:none; padding:0; margin:8px 0 0;">
-              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">› Risk Warnings &amp; Balancing Language</li>
-              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">› Prominence &amp; Presentation</li>
-              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">› Visual Claims &amp; Feature Highlights</li>
-              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">› Consistency With the App Store Listing</li>
-              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">› Past Performance</li>
+              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">&#8250; Risk Warnings &amp; Balancing Language</li>
+              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">&#8250; Prominence &amp; Presentation</li>
+              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">&#8250; Visual Claims &amp; Feature Highlights</li>
+              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">&#8250; Consistency With the App Store Listing</li>
+              <li style="padding:4px 0; color:var(--text-body); font-size:15px;">&#8250; Past Performance</li>
             </ul>
           </div>
         </div>
       </div>
 
       <!-- ═══ APP STORE DESCRIPTION ═══ -->
-      <div style="margin-bottom:14px; font-family:&#39;Michroma&#39;, sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:2.5px; color:var(--accent); font-weight:600;">App Store Description</div>
+      <div style="margin-bottom:14px; font-family:'Michroma', sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:2.5px; color:var(--accent); font-weight:600;">App Store Description</div>
 
       <!-- SECTION 1: Risk Warning Banner -->
       <div class="section-block open" id="app-sec1">
-        <div class="section-header" onclick="toggleSection(&#39;app-sec1&#39;)">
+        <div class="section-header" onclick="toggleSection('app-sec1')">
           <div class="section-number">1</div>
           <div class="section-title-group">
             <div class="section-title">Risk Warning Banner</div>
             <div class="section-ref">COBS 4.12A.10R / COBS 4.12A.38</div>
           </div>
-          <div class="section-toggle">▾</div>
+          <div class="section-toggle">&#9662;</div>
         </div>
         <div class="section-content">
           <div class="section-body">
@@ -1571,13 +1573,13 @@
 
       <!-- SECTION 2: Approval Time Stamp -->
       <div class="section-block" id="app-sec2">
-        <div class="section-header" onclick="toggleSection(&#39;app-sec2&#39;)">
+        <div class="section-header" onclick="toggleSection('app-sec2')">
           <div class="section-number">2</div>
           <div class="section-title-group">
             <div class="section-title">Approval Time Stamp</div>
             <div class="section-ref">Mandatory Requirement</div>
           </div>
-          <div class="section-toggle">▾</div>
+          <div class="section-toggle">&#9662;</div>
         </div>
         <div class="section-content">
           <div class="section-body">
@@ -1598,13 +1600,13 @@
 
       <!-- SECTION 3: Balancing Language -->
       <div class="section-block" id="app-sec3">
-        <div class="section-header" onclick="toggleSection(&#39;app-sec3&#39;)">
+        <div class="section-header" onclick="toggleSection('app-sec3')">
           <div class="section-number">3</div>
           <div class="section-title-group">
             <div class="section-title">Balancing Language</div>
             <div class="section-ref">Fair, Clear &amp; Not Misleading</div>
           </div>
-          <div class="section-toggle">▾</div>
+          <div class="section-toggle">&#9662;</div>
         </div>
         <div class="section-content">
           <div class="section-body">
@@ -1625,22 +1627,22 @@
             <table class="comparison-table">
               <thead>
                 <tr>
-                  <th class="good">✓ Balanced Approach</th>
-                  <th class="bad">✗ Unbalanced Approach</th>
+                  <th class="good">&#10003; Balanced Approach</th>
+                  <th class="bad">&#10007; Unbalanced Approach</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><span class="check">✓</span> "Earn variable returns on select digital assets. Returns are not guaranteed and are subject to market conditions."</td>
-                  <td><span class="cross">✗</span> "Earn up to 16% on your crypto!"</td>
+                  <td><span class="check">&#10003;</span> "Earn variable returns on select digital assets. Returns are not guaranteed and are subject to market conditions."</td>
+                  <td><span class="cross">&#10007;</span> "Earn up to 16% on your crypto!"</td>
                 </tr>
                 <tr>
-                  <td><span class="check">✓</span> "Trade 150+ assets. Cryptoassets are high-risk and prices can fluctuate significantly."</td>
-                  <td><span class="cross">✗</span> "Trade 150+ assets and build your portfolio!"</td>
+                  <td><span class="check">&#10003;</span> "Trade 150+ assets. Cryptoassets are high-risk and prices can fluctuate significantly."</td>
+                  <td><span class="cross">&#10007;</span> "Trade 150+ assets and build your portfolio!"</td>
                 </tr>
                 <tr>
-                  <td><span class="check">✓</span> "Locked assets may not be immediately accessible and you may be unable to withdraw until the term ends."</td>
-                  <td><span class="cross">✗</span> "Lock your assets for higher rewards!"</td>
+                  <td><span class="check">&#10003;</span> "Locked assets may not be immediately accessible and you may be unable to withdraw until the term ends."</td>
+                  <td><span class="cross">&#10007;</span> "Lock your assets for higher rewards!"</td>
                 </tr>
               </tbody>
             </table>
@@ -1650,13 +1652,13 @@
 
       <!-- SECTION 4: Regulatory Framing -->
       <div class="section-block" id="app-sec4">
-        <div class="section-header" onclick="toggleSection(&#39;app-sec4&#39;)">
+        <div class="section-header" onclick="toggleSection('app-sec4')">
           <div class="section-number">4</div>
           <div class="section-title-group">
             <div class="section-title">Regulatory Framing</div>
             <div class="section-ref">Claims of Regulatory Status</div>
           </div>
-          <div class="section-toggle">▾</div>
+          <div class="section-toggle">&#9662;</div>
         </div>
         <div class="section-content">
           <div class="section-body">
@@ -1679,13 +1681,13 @@
 
       <!-- SECTION 5: Substantiation & Clarity / Sensitive Words -->
       <div class="section-block" id="app-sec5">
-        <div class="section-header" onclick="toggleSection(&#39;app-sec5&#39;)">
+        <div class="section-header" onclick="toggleSection('app-sec5')">
           <div class="section-number">5</div>
           <div class="section-title-group">
             <div class="section-title">Substantiation, Clarity &amp; Sensitive Words</div>
             <div class="section-ref">COBS 4.2.5G</div>
           </div>
-          <div class="section-toggle">▾</div>
+          <div class="section-toggle">&#9662;</div>
         </div>
         <div class="section-content">
           <div class="section-body">
@@ -1699,31 +1701,31 @@
             <div class="callout rule">
               <div class="callout-label">How to Apply</div>
               <ul style="list-style:none; padding:0; margin:0;">
-                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">› Do not use language that implies certainty of outcomes, risk-free investing, or capital protection</li>
-                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">› Do not suggest that assets, returns, or user funds are guaranteed</li>
-                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">› Avoid implying regulatory protection, insurance, or safeguarding unless this is accurate and clearly explained in each instance</li>
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; Do not use language that implies certainty of outcomes, risk-free investing, or capital protection</li>
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; Do not suggest that assets, returns, or user funds are guaranteed</li>
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; Avoid implying regulatory protection, insurance, or safeguarding unless this is accurate and clearly explained in each instance</li>
               </ul>
             </div>
 
             <table class="comparison-table">
               <thead>
                 <tr>
-                  <th class="bad">✗ Problematic Phrasing</th>
-                  <th class="good">✓ Compliant Alternative</th>
+                  <th class="bad">&#10007; Problematic Phrasing</th>
+                  <th class="good">&#10003; Compliant Alternative</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><span class="cross">✗</span> "Your funds are secure"</td>
-                  <td><span class="check">✓</span> "We use encryption and multi-factor authentication to help protect your account. However, cryptoassets are not covered by the FSCS."</td>
+                  <td><span class="cross">&#10007;</span> "Your funds are secure"</td>
+                  <td><span class="check">&#10003;</span> "We use encryption and multi-factor authentication to help protect your account. However, cryptoassets are not covered by the FSCS."</td>
                 </tr>
                 <tr>
-                  <td><span class="cross">✗</span> "Guaranteed returns"</td>
-                  <td><span class="check">✓</span> "Variable returns, subject to market conditions. Returns are not guaranteed."</td>
+                  <td><span class="cross">&#10007;</span> "Guaranteed returns"</td>
+                  <td><span class="check">&#10003;</span> "Variable returns, subject to market conditions. Returns are not guaranteed."</td>
                 </tr>
                 <tr>
-                  <td><span class="cross">✗</span> "Protected investments"</td>
-                  <td><span class="check">✓</span> "Cryptoassets are high-risk and are not protected by the FSCS."</td>
+                  <td><span class="cross">&#10007;</span> "Protected investments"</td>
+                  <td><span class="check">&#10003;</span> "Cryptoassets are high-risk and are not protected by the FSCS."</td>
                 </tr>
               </tbody>
             </table>
@@ -1732,17 +1734,17 @@
       </div>
 
       <!-- ═══ APP STORE VISUALS ═══ -->
-      <div style="margin:40px 0 14px; font-family:&#39;Michroma&#39;, sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:2.5px; color:var(--accent); font-weight:600;">App Store Visuals</div>
+      <div style="margin:40px 0 14px; font-family:'Michroma', sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:2.5px; color:var(--accent); font-weight:600;">App Store Visuals</div>
 
       <!-- SECTION 6: Visual Risk Warning -->
       <div class="section-block" id="app-sec6">
-        <div class="section-header" onclick="toggleSection(&#39;app-sec6&#39;)">
+        <div class="section-header" onclick="toggleSection('app-sec6')">
           <div class="section-number">6</div>
           <div class="section-title-group">
             <div class="section-title">Risk Warning in Visuals</div>
             <div class="section-ref">Visual Compliance</div>
           </div>
-          <div class="section-toggle">▾</div>
+          <div class="section-toggle">&#9662;</div>
         </div>
         <div class="section-content">
           <div class="section-body">
@@ -1758,13 +1760,13 @@
 
       <!-- SECTION 7: Past Performance -->
       <div class="section-block" id="app-sec7">
-        <div class="section-header" onclick="toggleSection(&#39;app-sec7&#39;)">
+        <div class="section-header" onclick="toggleSection('app-sec7')">
           <div class="section-number">7</div>
           <div class="section-title-group">
             <div class="section-title">Past Performance in Visuals</div>
             <div class="section-ref">Chart Display Requirements</div>
           </div>
-          <div class="section-toggle">▾</div>
+          <div class="section-toggle">&#9662;</div>
         </div>
         <div class="section-content">
           <div class="section-body">
@@ -1783,7 +1785,7 @@
       </div>
 
       <!-- ═══ EXAMPLE MOCK-UP ═══ -->
-      <div style="margin:40px 0 14px; font-family:&#39;Michroma&#39;, sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:2.5px; color:var(--accent); font-weight:600;">Compliant App Store Listing Example</div>
+      <div style="margin:40px 0 14px; font-family:'Michroma', sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:2.5px; color:var(--accent); font-weight:600;">Compliant App Store Listing Example</div>
 
       <div class="callout tip" style="margin-bottom:24px;">
         <div class="callout-label">About This Mock-Up</div>
@@ -1807,7 +1809,7 @@
           <div style="font-size:16px; color:var(--info); font-weight:600; margin-bottom:16px;">About this app</div>
 
           <!-- RISK WARNING — at the top, plain text, no banner -->
-          <p style="font-size:15px; color:var(--text-body); line-height:1.7; margin-bottom:16px;">Don't invest unless you're prepared to lose all the money you invest. This is a high-risk investment and you should not expect to be protected if something goes wrong. <a href="file:///Users/hannah/Library/Application%20Support/Claude/local-agent-mode-sessions/753c59d5-b5f3-4474-bc3e-365fcda0d13c/f22e5294-a9d0-477e-9f28-77b2ee0f5443/local_d06d5b40-33cd-416f-9ed1-a9c9d06d59ce/outputs/index.html#" style="color:var(--info); text-decoration:underline; text-underline-offset:3px;">Take 2 mins to learn more</a></p>
+          <p style="font-size:15px; color:var(--text-body); line-height:1.7; margin-bottom:16px;">Don't invest unless you're prepared to lose all the money you invest. This is a high-risk investment and you should not expect to be protected if something goes wrong. <a href="#" style="color:var(--info); text-decoration:underline; text-underline-offset:3px;">Take 2 mins to learn more</a></p>
 
           <!-- Subtitle -->
           <p style="font-size:15px; color:var(--text-body); line-height:1.7; margin-bottom:24px;">Buy, sell and manage crypto. Track your portfolio. Send and receive digital assets.</p>
@@ -1857,7 +1859,7 @@
     <div class="page" id="page-crypto-app">
       <div class="page-header"><div class="page-label">Cryptoasset Promotions</div><div class="page-title">App Reviews</div></div>
       <div class="placeholder-content">
-        <div class="placeholder-icon">📲</div>
+        <div class="placeholder-icon">&#128242;</div>
         <div class="placeholder-title">Coming Soon</div>
         <div class="placeholder-desc">In-app promotion compliance requirements and review guidance will be available here.</div>
       </div>
@@ -1866,7 +1868,7 @@
     <div class="page" id="page-crypto-social">
       <div class="page-header"><div class="page-label">Cryptoasset Promotions</div><div class="page-title">Social Media Reviews</div></div>
       <div class="placeholder-content">
-        <div class="placeholder-icon">💬</div>
+        <div class="placeholder-icon">&#128172;</div>
         <div class="placeholder-title">Coming Soon</div>
         <div class="placeholder-desc">Social media financial promotion compliance requirements for cryptoassets will be available here.</div>
       </div>
@@ -1875,7 +1877,7 @@
     <div class="page" id="page-funds-factsheets">
       <div class="page-header"><div class="page-label">Fund Promotions</div><div class="page-title">Fact Sheets</div></div>
       <div class="placeholder-content">
-        <div class="placeholder-icon">📄</div>
+        <div class="placeholder-icon">&#128196;</div>
         <div class="placeholder-title">Coming Soon</div>
         <div class="placeholder-desc">Fund fact sheet compliance guidance and review frameworks will be available here.</div>
       </div>
@@ -1884,7 +1886,7 @@
     <div class="page" id="page-funds-prospectus">
       <div class="page-header"><div class="page-label">Fund Promotions</div><div class="page-title">Prospectus / Supplements</div></div>
       <div class="placeholder-content">
-        <div class="placeholder-icon">📑</div>
+        <div class="placeholder-icon">&#128209;</div>
         <div class="placeholder-title">Coming Soon</div>
         <div class="placeholder-desc">Prospectus and supplement review compliance guidance will be available here.</div>
       </div>
@@ -1893,7 +1895,7 @@
     <div class="page" id="page-funds-presentations">
       <div class="page-header"><div class="page-label">Fund Promotions</div><div class="page-title">Presentations</div></div>
       <div class="placeholder-content">
-        <div class="placeholder-icon">📊</div>
+        <div class="placeholder-icon">&#128202;</div>
         <div class="placeholder-title">Coming Soon</div>
         <div class="placeholder-desc">Fund presentation compliance requirements and review guidance will be available here.</div>
       </div>
@@ -1902,7 +1904,7 @@
     <div class="page" id="page-funds-quarterly">
       <div class="page-header"><div class="page-label">Fund Promotions</div><div class="page-title">Quarterly Commentary</div></div>
       <div class="placeholder-content">
-        <div class="placeholder-icon">📈</div>
+        <div class="placeholder-icon">&#128200;</div>
         <div class="placeholder-title">Coming Soon</div>
         <div class="placeholder-desc">Quarterly commentary compliance guidance and frameworks will be available here.</div>
       </div>
@@ -1911,7 +1913,7 @@
     <div class="page" id="page-cetn-overview">
       <div class="page-header"><div class="page-label">CETN</div><div class="page-title">Overview</div></div>
       <div class="placeholder-content">
-        <div class="placeholder-icon">△</div>
+        <div class="placeholder-icon">&#9651;</div>
         <div class="placeholder-title">Coming Soon</div>
         <div class="placeholder-desc">CETN financial promotion compliance guidance will be available here.</div>
       </div>
@@ -2001,5 +2003,5 @@
     }
   });
 </script>
-
-</body></html>
+</body>
+</html>
