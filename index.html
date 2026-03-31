@@ -921,7 +921,7 @@
       </div>
       <div class="nav-items open">
         <div class="nav-item" data-page="crypto-web" onclick="showPage('crypto-web', this)">
-          Web Reviews <span class="nav-badge soon">Soon</span>
+          Web Reviews <span class="nav-badge live">Live</span>
         </div>
         <div class="nav-item" data-page="crypto-appstore" onclick="showPage('crypto-appstore', this)">
           App Store Reviews <span class="nav-badge live">Live</span>
@@ -1008,7 +1008,7 @@
             Back-end frictions, onboarding flows, risk warnings, and client categorisation requirements under PS23/6 and COBS 4.12A.
           </div>
           <div class="card-items">
-            <span class="card-item-tag">Web Reviews</span>
+            <span class="card-item-tag active">Web Reviews &#10003;</span>
             <span class="card-item-tag active">App Store &#10003;</span>
             <span class="card-item-tag">App Reviews</span>
             <span class="card-item-tag">Social Media</span>
@@ -1484,14 +1484,425 @@
       </div>
     </div>
 
-    <!-- PLACEHOLDER PAGES -->
+    <!-- WEB REVIEWS PAGE -->
     <div class="page" id="page-crypto-web">
-      <div class="page-header"><div class="page-label">Cryptoasset Promotions</div><div class="page-title">Web Reviews</div></div>
-      <div class="placeholder-content">
-        <div class="placeholder-icon">&#127760;</div>
-        <div class="placeholder-title">Coming Soon</div>
-        <div class="placeholder-desc">Compliance guidance for cryptoasset web promotions and website review requirements will be available here.</div>
+      <div class="page-header fade-in">
+        <div class="page-label">Cryptoasset Promotions</div>
+        <div class="page-title">Website Compliance Guide</div>
+        <p class="page-intro">
+          This guide provides a clear, practical reference for preparing compliant website financial promotions prior to submission. It sets out the core regulatory requirements and common considerations that apply to websites, enabling teams to build these standards into their internal review and sign-off processes. By addressing frequent issues and recurring feedback upfront, this guide aims to improve the quality of initial submissions, reduce avoidable follow-up queries, and support a more efficient and consistent review process.
+        </p>
       </div>
+
+      <div class="key-points fade-in">
+        <div class="key-point"><span class="kp-icon">&#11045;</span> Zeyro reviews your entire website &mdash; every page accessible to UK users constitutes a financial promotion</div>
+        <div class="key-point"><span class="kp-icon">&#11045;</span> This guide applies to all pages, not just your homepage</div>
+        <div class="key-point"><span class="kp-icon">&#11045;</span> Feedback from the review process will reference the rules set out here</div>
+      </div>
+
+      <div class="callout rule" style="margin-bottom:36px;">
+        <div class="callout-label">This Guide Covers Six Core Areas</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:10px;">
+          <div>
+            <ul style="list-style:none; padding:0; margin:0;">
+              <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; <strong style="color:var(--text-white);">1.</strong> The Risk Warning Banner</li>
+              <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; <strong style="color:var(--text-white);">2.</strong> The Approval Time Stamp</li>
+              <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; <strong style="color:var(--text-white);">3.</strong> Balancing Language</li>
+            </ul>
+          </div>
+          <div>
+            <ul style="list-style:none; padding:0; margin:0;">
+              <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; <strong style="color:var(--text-white);">4.</strong> Fair, Clear and Not Misleading</li>
+              <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; <strong style="color:var(--text-white);">5.</strong> Sensitive Words</li>
+              <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; <strong style="color:var(--text-white);">6.</strong> Regulatory Framing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 1: Risk Warning Banner -->
+      <div class="section-block open" id="web-sec1">
+        <div class="section-header" onclick="toggleSection('web-sec1')">
+          <div class="section-number">1</div>
+          <div class="section-title-group">
+            <div class="section-title">The Risk Warning Banner</div>
+            <div class="section-ref">COBS 4.12A.10R / COBS 4.12A.11R / COBS 4.12A.38G</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <div class="sub-label green">1.1 Why the Risk Warning Banner Matters</div>
+            <p>Under COBS 4.12A.10R and COBS 4.12A.11R, every page of your website that constitutes a financial promotion must display the FCA-prescribed risk warning. This is non-negotiable and is the first thing Zeyro checks when reviewing a submission.</p>
+
+            <div class="sub-label green">1.2 The Prescribed Wording</div>
+            <p>You must use the following exact wording. It cannot be paraphrased, shortened (unless character limits genuinely prevent it), or have other text inserted within the banner:</p>
+
+            <div class="callout rule">
+              <div class="callout-label">Prescribed Wording</div>
+              "Don't invest unless you're prepared to lose all the money you invest. This is a high-risk investment and you should not expect to be protected if something goes wrong. Take 2 mins to learn more"
+            </div>
+
+            <p>Source: COBS 4.12A.11R. This wording must appear verbatim on every page that is a financial promotion.</p>
+
+            <div class="sub-label green">1.3 The "Take 2 Mins to Learn More" Link</div>
+            <p>Immediately following the prescribed risk warning, you must include a clickable link with the text "Take 2 mins to learn more" (COBS 4.12A.11R(3)). This link must open your risk summary page &mdash; either as a pop-up, a dedicated page on your domain, or an equivalent.</p>
+            <ul>
+              <li>The link text must be exactly "Take 2 mins to learn more" &mdash; do not rephrase it.</li>
+              <li>The risk summary content must follow the structure set out in COBS 4 Annex 1R.</li>
+              <li>The link must be part of the risk warning banner &mdash; not elsewhere on the page.</li>
+            </ul>
+
+            <div class="sub-label green">1.4 Placement &mdash; Where the Banner Must Appear</div>
+            <p>The risk warning banner must be placed at the top of every page below any other fixed elements (such as a navigation bar). It must remain <strong style="color:var(--text-white)">fixed and visible at all times</strong> &mdash; it must not scroll off screen as the user moves down the page.</p>
+            <ul>
+              <li>Apply the banner to every page that a UK user can access, including log-in and registration pages.</li>
+              <li>The banner must stay fixed at the top of the screen when users scroll &mdash; this is a common issue we flag.</li>
+              <li>Do not place the risk warning only at the bottom of the page.</li>
+            </ul>
+
+            <div class="sub-label green">1.5 Design and Prominence Requirements</div>
+            <p>The FCA is very clear that the risk warning must not be diminished by design choices. Under COBS 4.12A.38G and COBS 4.12A.40R, the following design failures will result in rejection:</p>
+
+            <div class="callout warning">
+              <div class="callout-label">Design Failures That Will Be Rejected</div>
+              <ul style="list-style:none; padding:0; margin:0;">
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#10007; Using a font size smaller than the standard text size used elsewhere on the page</li>
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#10007; Using a background colour that does not sufficiently contrast with the text</li>
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#10007; Making the risk warning dismissible &mdash; do not include an 'X' or close button</li>
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#10007; Fading the text of the risk warning</li>
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#10007; Placing the risk warning behind an additional click (e.g. requiring users to expand it)</li>
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#10007; Using a font or background colour that blends with the surrounding content</li>
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#10007; Allowing the warning to scroll off the screen when the user scrolls down</li>
+              </ul>
+            </div>
+
+            <div class="callout example">
+              <div class="callout-label">Real Example From Our Review</div>
+              One client used black text against a dark grey background for the risk warning. The FCA flagged this directly as a compliance failure. The client also allowed the warning to scroll off screen. Both issues required urgent remediation before approval.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 2: Approval Time Stamp -->
+      <div class="section-block" id="web-sec2">
+        <div class="section-header" onclick="toggleSection('web-sec2')">
+          <div class="section-number">2</div>
+          <div class="section-title-group">
+            <div class="section-title">The Approval Time Stamp</div>
+            <div class="section-ref">COBS 4.10.7A</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <div class="sub-label green">2.1 Why an Approval Time Stamp is Required</div>
+            <p>Under COBS 4.10.7A, every financial promotion must display, with sufficient prominence, the name of the approving firm (or FRN) and the date on which it was approved.</p>
+
+            <div class="sub-label green">2.2 The Required Wording</div>
+            <div class="callout rule">
+              <div class="callout-label">Prescribed Wording</div>
+              "This Financial Promotion has been approved by Zeyro LTD (FRN 1001386) on [DATE]"
+            </div>
+            <ul>
+              <li>Replace [DATE] with the date on which Zeyro provided approval. Do not use a placeholder date or leave the field blank.</li>
+              <li>The stamp must appear on every page that constitutes a financial promotion.</li>
+              <li>It is typically placed at the bottom of each webpage or in the footer &mdash; it should be clearly legible.</li>
+              <li>The wording must refer specifically to "financial promotions" &mdash; not "offers", "content", or any other term.</li>
+            </ul>
+
+            <div class="sub-label green">2.3 What Happens When You Update Your Website</div>
+            <p>If you make material changes to your website content after approval, you will need to resubmit the updated pages for review. In some cases (where changes are minor and within the scope of the originally approved content), the original approval date can be retained. Zeyro will confirm this on a case-by-case basis.</p>
+
+            <div class="callout tip">
+              <div class="callout-label">Important</div>
+              If your firm has previously been approved under a different approver name (e.g. Englebert Ltd), please update the approval stamp to reflect "Zeyro LTD (FRN 1001386)" going forward.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 3: Balancing Language -->
+      <div class="section-block" id="web-sec3">
+        <div class="section-header" onclick="toggleSection('web-sec3')">
+          <div class="section-number">3</div>
+          <div class="section-title-group">
+            <div class="section-title">Balancing Language (Risk Disclaimers)</div>
+            <div class="section-ref">COBS 4.2.1R</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <div class="sub-label green">3.1 What Is Balancing Language?</div>
+            <p>Balancing language refers to risk disclosures that must sit alongside benefits, features, and claims on your website. The FCA requires that promotions give a fair and prominent indication of relevant risks wherever potential benefits are described (COBS 4.2.1R). The prescribed risk warning banner alone is not sufficient &mdash; you must also include contextualised risk information throughout the body of your content.</p>
+            <p>Think of it this way: for every benefit you describe, ask yourself &mdash; "What is the corresponding risk that a consumer needs to know?" That risk information needs to appear near the benefit, not buried at the bottom of the page.</p>
+
+            <div class="sub-label green">3.2 Core Principles</div>
+            <ul>
+              <li>Risk disclosures must be presented with <strong style="color:var(--text-white)">equal prominence</strong> to the benefits they accompany &mdash; matching font size, weight, and visibility.</li>
+              <li>Risk information must not be hidden, de-emphasised, or grouped together at the bottom of a page.</li>
+              <li>Where benefits are described using bold text or large font, the accompanying risk language must also be clearly visible.</li>
+              <li>Risk language must be specific to the feature being described &mdash; generic disclaimers are not sufficient.</li>
+            </ul>
+
+            <div class="sub-label green">3.3 Asset-Specific Risks</div>
+            <p>Where your website refers to specific types of cryptoasset, you must include risk disclosures tailored to that asset type. A general risk warning is not sufficient where specific assets or services are being promoted.</p>
+
+            <div class="callout rule">
+              <div class="callout-label">Baseline Risks (All Cryptoassets)</div>
+              <ul style="list-style:none; padding:0; margin:0;">
+                <li style="padding:5px 0; font-size:15px; color:var(--text-body);"><strong style="color:var(--text-white)">Investment risk:</strong> The value of cryptoassets can be extremely volatile. You could lose all of the money you invest.</li>
+                <li style="padding:5px 0; font-size:15px; color:var(--text-body);"><strong style="color:var(--text-white)">Lack of protections:</strong> Cryptoassets are largely unregulated. You will not be protected by the FSCS or the FOS if something goes wrong.</li>
+                <li style="padding:5px 0; font-size:15px; color:var(--text-body);"><strong style="color:var(--text-white)">Selling your investment:</strong> You may not always be able to sell your cryptoassets when you want.</li>
+                <li style="padding:5px 0; font-size:15px; color:var(--text-body);"><strong style="color:var(--text-white)">Cryptoassets are complex:</strong> It may not always be clear how a cryptoasset works or what factors influence its value.</li>
+                <li style="padding:5px 0; font-size:15px; color:var(--text-body);"><strong style="color:var(--text-white)">Diversification:</strong> It is good practice not to invest more than 10% of your money in high-risk investments.</li>
+              </ul>
+            </div>
+
+            <div class="callout warning" style="margin-top:16px;">
+              <div class="callout-label">Asset-Specific Risk Categories</div>
+              <p style="margin-bottom:12px;">The following asset types require <strong style="color:var(--text-white)">additional</strong> tailored risk disclosures beyond the baseline risks above:</p>
+              <ul style="list-style:none; padding:0; margin:0;">
+                <li style="padding:5px 0; font-size:15px; color:var(--text-body);"><strong style="color:var(--text-white)">DeFi Tokens</strong> &mdash; Smart contract risk, regulatory risk, rug pulls/exit scams, oracle risk, protocol complexity</li>
+                <li style="padding:5px 0; font-size:15px; color:var(--text-body);"><strong style="color:var(--text-white)">Memecoins</strong> &mdash; Extreme volatility, lack of utility, market manipulation, community-driven risks, emotional investing</li>
+                <li style="padding:5px 0; font-size:15px; color:var(--text-body);"><strong style="color:var(--text-white)">Stablecoins</strong> &mdash; Counterparty risk, redemption risk, collateral risk, FX risk, algorithmic risk</li>
+                <li style="padding:5px 0; font-size:15px; color:var(--text-body);"><strong style="color:var(--text-white)">Wrapped Tokens</strong> &mdash; Smart contract risk, collateral risk, custodial risk, bridging risk, price divergence</li>
+                <li style="padding:5px 0; font-size:15px; color:var(--text-body);"><strong style="color:var(--text-white)">Security Tokens</strong> &mdash; Regulatory risk, issuer risk, liquidity risk, legal complexity, custody risk</li>
+                <li style="padding:5px 0; font-size:15px; color:var(--text-body);"><strong style="color:var(--text-white)">Governance &amp; Utility Tokens</strong> &mdash; Project dependency, governance concentration, volatility, functionality risk, regulatory uncertainty</li>
+              </ul>
+            </div>
+
+            <div class="sub-label green">3.4 Service/Product Specific Risks</div>
+            <p>Where your website promotes specific products or services, you must include risk disclosures tailored to that feature.</p>
+
+            <table class="comparison-table">
+              <thead><tr><th class="bad">Service / Feature</th><th class="good">Required Risk Disclosures</th></tr></thead>
+              <tbody>
+                <tr><td><strong style="color:var(--text-white)">Staking</strong></td><td>Price volatility while staked; inability to sell during unstaking period; length of lock-up; loss risk &mdash; rewards not guaranteed</td></tr>
+                <tr><td><strong style="color:var(--text-white)">Crypto Lending</strong></td><td>Counterparty risk; liquidity risk; smart contract risk; rate variability; collateral risk</td></tr>
+                <tr><td><strong style="color:var(--text-white)">Crypto Borrowing</strong></td><td>Liquidation risk; interest rate risk; collateral volatility; repayment risk; platform risk</td></tr>
+                <tr><td><strong style="color:var(--text-white)">OTC Trading</strong></td><td>Counterparty risk; price risk; liquidity risk; settlement risk; regulatory risk</td></tr>
+                <tr><td><strong style="color:var(--text-white)">APY / Yield Figures</strong></td><td>Rates subject to change and not guaranteed; explain calculation basis; include source and effective date; disclose if promotional</td></tr>
+                <tr><td><strong style="color:var(--text-white)">Past Performance Charts</strong></td><td>Past performance disclaimer; default to "All Time" / MAX view; include data source</td></tr>
+              </tbody>
+            </table>
+
+            <div class="sub-label green">3.5 Placement</div>
+            <p>Risk disclosures must appear in proximity to the relevant feature or claim &mdash; not only in the footer or on a separate page. Where a benefit is promoted in a box, card, or module on your page, the risk disclaimer should be immediately adjacent or directly beneath that element.</p>
+
+            <table class="comparison-table">
+              <thead><tr><th class="good">&#10003; Compliant</th><th class="bad">&#10007; Non-Compliant</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><span class="check">&#10003;</span> "Earn up to 15% APY on select tokens. Rate variable and subject to change. APY is not guaranteed and depends on market conditions. You could lose money."</td>
+                  <td><span class="cross">&#10007;</span> "Earn up to 15% APY on select tokens." (risk disclaimer buried in footer in small grey text)</td>
+                </tr>
+                <tr>
+                  <td><span class="check">&#10003;</span> Risk language displayed in the same font size and weight as benefit text, directly beneath the feature description.</td>
+                  <td><span class="cross">&#10007;</span> Risk language displayed in a small font beneath a large headline, making it visually subordinate to the benefit claim.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 4: Fair, Clear and Not Misleading -->
+      <div class="section-block" id="web-sec4">
+        <div class="section-header" onclick="toggleSection('web-sec4')">
+          <div class="section-number">4</div>
+          <div class="section-title-group">
+            <div class="section-title">Fair, Clear and Not Misleading</div>
+            <div class="section-ref">COBS 4.2.1R</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <div class="sub-label green">4.1 The Core Standard</div>
+            <p>Under COBS 4.2.1R, every financial promotion must be fair, clear, and not misleading. This standard applies to every piece of content on your website &mdash; including headings, straplines, product descriptions, FAQs, and customer journey copy.</p>
+
+            <div class="sub-label green">4.2 Substantiating Claims</div>
+            <p>Any claim you make about your product or service must be capable of being evidenced. This includes comparative claims (e.g. "faster", "lower fees"), superlative claims (e.g. "the most cost-effective"), and outcome-based claims (e.g. "save money", "grow your assets").</p>
+            <ul>
+              <li>If you cannot evidence a claim, remove or rephrase it.</li>
+              <li>Comparative claims ("faster", "lower") must specify what they are being compared to.</li>
+              <li>Superlative claims ("best", "most", "leading") are high risk &mdash; they will almost always require substantiation or removal.</li>
+              <li>Outcome-based claims ("save money", "earn more") imply certainty and must be qualified.</li>
+            </ul>
+
+            <div class="sub-label green">4.3 Common Phrases That Require Attention</div>
+            <table class="comparison-table">
+              <thead><tr><th class="bad">Phrase / Claim</th><th class="good">Suggested Approach</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cross">&#10007;</span> "Move your money internationally faster and with lower fees"</td><td><span class="check">&#10003;</span> "Move your money internationally quickly and with low fees." (or provide clear, evidenced comparison)</td></tr>
+                <tr><td><span class="cross">&#10007;</span> "Enjoy a fast, compliant, and hassle-free platform"</td><td><span class="check">&#10003;</span> Remove 'compliant' unless clearly substantiated. Remove 'hassle-free' as it understates the risks involved.</td></tr>
+                <tr><td><span class="cross">&#10007;</span> "[Exchange] is the trusted exchange for XYZ"</td><td><span class="check">&#10003;</span> Either remove or link to verifiable evidence (e.g. Trustpilot rating with a direct link).</td></tr>
+                <tr><td><span class="cross">&#10007;</span> "Sign up and start trading immediately"</td><td><span class="check">&#10003;</span> Ensure transparency and reflect the full onboarding process (appropriateness assessment, cooling-off period, etc.).</td></tr>
+              </tbody>
+            </table>
+
+            <div class="sub-label green">4.4 Customer Journey Accuracy</div>
+            <p>Your website must accurately represent the journey a UK user will go through. If your 'How It Works' or 'Get Started' sections present onboarding as simple or immediate, this will be flagged as misleading &mdash; because UK users must complete several mandatory steps before they can trade:</p>
+            <ul>
+              <li>Self-categorisation (High Net-Worth Investor or Restricted Investor statement)</li>
+              <li>Appropriateness assessment</li>
+              <li>24-hour cooling-off period</li>
+              <li>Personalised risk warning acknowledgement</li>
+            </ul>
+
+            <div class="callout tip">
+              <div class="callout-label">Recommendation</div>
+              If you want to include a 'How It Works' section, frame it as "How [Product] Works Once You Are Set Up" to avoid implying that users can access services immediately.
+            </div>
+
+            <div class="sub-label green">4.5 Testimonials and Customer Reviews</div>
+            <p>If your website displays customer testimonials or review ratings (e.g. Trustpilot), these need to be transparent in what they represent. Where they are live (linked to a Trustpilot or equivalent platform), this is generally acceptable. Where they are static elements, they must not contain sensitive words such as "secure", "guaranteed", "trusted", or "protected", and must not be misleading about the nature of the service.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 5: Sensitive Words -->
+      <div class="section-block" id="web-sec5">
+        <div class="section-header" onclick="toggleSection('web-sec5')">
+          <div class="section-number">5</div>
+          <div class="section-title-group">
+            <div class="section-title">Sensitive Words</div>
+            <div class="section-ref">COBS 4.2.5G</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <div class="sub-label green">5.1 What Are Sensitive Words?</div>
+            <p>The FCA has identified certain words as 'sensitive' when used in the context of cryptoasset promotions (COBS 4.2.5G). These words are flagged because they can imply a level of certainty, safety, or protection that is not appropriate given the high-risk, unregulated nature of cryptoassets.</p>
+
+            <table class="comparison-table">
+              <thead><tr><th class="bad">Word</th><th class="bad">Why It Is Problematic</th><th class="good">Guidance</th></tr></thead>
+              <tbody>
+                <tr><td><strong style="color:var(--error)">"Secure" / "Securely"</strong></td><td>Implies capital protection or safety that does not exist for cryptoassets</td><td>Remove in most contexts. If referring to a technical process, provide a specific explanation.</td></tr>
+                <tr><td><strong style="color:var(--error)">"Guaranteed"</strong></td><td>Implies certainty of outcome &mdash; no outcome in cryptoassets can be guaranteed</td><td>Remove entirely. Do not use in relation to returns, rates, or investment outcomes.</td></tr>
+                <tr><td><strong style="color:var(--error)">"Protected" / "Safe"</strong></td><td>Implies FSCS or regulatory protection &mdash; none of which apply</td><td>Remove. If referring to technical safeguards, explain specifically what is and is not protected.</td></tr>
+                <tr><td><strong style="color:var(--error)">"Easy" / "Simple"</strong></td><td>Downplays the complexity and risk of cryptoasset investing</td><td>Remove. Focus on what is well-structured or efficient, with appropriate qualification.</td></tr>
+                <tr><td><strong style="color:var(--error)">"Compliant"</strong></td><td>Without substantiation, implies the platform meets all UK regulations</td><td>Remove unless clearly substantiated with specific frameworks and a UK-protection disclaimer.</td></tr>
+                <tr><td><strong style="color:var(--error)">"Hassle-Free"</strong></td><td>Implies crypto investing is simple and low-effort</td><td>Remove. Focus on specific, evidenced benefits.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="sub-label green">5.2 "Secure" &mdash; The Most Common Issue</div>
+            <p>'Secure' is by far the most frequently flagged word in our website reviews. It appears in many contexts &mdash; service descriptions, feature labels, marketing straplines &mdash; and in almost all cases it requires amendment.</p>
+
+            <table class="comparison-table">
+              <thead><tr><th class="good">&#10003; Compliant</th><th class="bad">&#10007; Non-Compliant</th></tr></thead>
+              <tbody>
+                <tr><td><span class="check">&#10003;</span> "We are uncompromising in our approach to security" &mdash; describes your attitude, not a guaranteed outcome</td><td><span class="cross">&#10007;</span> "Secure crypto payments" &mdash; implies capital protection</td></tr>
+                <tr><td><span class="check">&#10003;</span> "Transfers are protected by 256-bit TLS encryption" &mdash; explains the specific technical measure</td><td><span class="cross">&#10007;</span> "Securely store your crypto assets" &mdash; implies capital safety</td></tr>
+                <tr><td><span class="check">&#10003;</span> "KYC and AML checks are conducted via [insert]" &mdash; explains a specific process</td><td><span class="cross">&#10007;</span> "Launch secure, scalable wallets" &mdash; implies the product is protected from risk</td></tr>
+              </tbody>
+            </table>
+
+            <div class="sub-label green">5.3 The "Show, Don't Tell" Principle</div>
+            <p>Rather than labelling your product as 'secure', 'trusted', or 'compliant', explain specifically what processes, safeguards, or standards you apply &mdash; and let consumers draw their own conclusions. This approach is both more credible and more compliant.</p>
+
+            <div class="callout example">
+              <div class="callout-label">Example</div>
+              Instead of "We offer secure digital asset storage", write: "Digital assets are held in cold storage with multi-signature authentication. Please note that cryptoassets are not covered by the FSCS and their value can fall to zero."
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 6: Regulatory Framing -->
+      <div class="section-block" id="web-sec6">
+        <div class="section-header" onclick="toggleSection('web-sec6')">
+          <div class="section-number">6</div>
+          <div class="section-title-group">
+            <div class="section-title">Regulatory Framing</div>
+            <div class="section-ref">Claims of Regulatory Status</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <div class="sub-label green">6.1 The Risk of Misleading Regulatory Language</div>
+            <p>Many clients are regulated or licensed in other jurisdictions (e.g. as a VASP in the EU). References to this regulatory status on a website directed at UK users can create a false impression that UK regulatory protections apply. The FCA is highly sensitive to this.</p>
+            <p>Any reference to your regulatory status must be accompanied by a clear clarification that this does not provide UK protections. This clarification must appear with <strong style="color:var(--text-white)">equal prominence</strong> to the original claim &mdash; not in a footnote or in small text.</p>
+
+            <div class="sub-label green">6.2 Recommended Clarification Statements</div>
+            <div class="callout rule">
+              <div class="callout-label">Option A</div>
+              "We are not a UK-authorised firm, so UK users cannot refer complaints to the Financial Ombudsman Service (FOS), and investments are not covered by the Financial Services Compensation Scheme (FSCS)."
+            </div>
+            <div class="callout rule" style="margin-top:12px;">
+              <div class="callout-label">Option B</div>
+              "However, this does not provide protections to UK investors."
+            </div>
+
+            <div class="sub-label green">6.3 Specific Phrases to Avoid or Qualify</div>
+            <ul>
+              <li><strong style="color:var(--error)">"Fully regulated and secure"</strong> &mdash; both words are problematic; remove or qualify with a UK-protection disclaimer.</li>
+              <li><strong style="color:var(--error)">"Licensed VASP + FCA-approved promotions"</strong> &mdash; misleading; the FCA does not approve promotions. Remove the FCA reference entirely.</li>
+              <li><strong style="color:var(--error)">"Full compliance with financial standards"</strong> &mdash; unclear which standards; implies UK protection. Specify the framework and disclaim UK protections.</li>
+              <li><strong style="color:var(--error)">"Your assets are protected by institutional-grade custody solutions, regulatory compliance, and insurance for your peace of mind"</strong> &mdash; this combination is highly misleading for UK users. Rewrite to explain specifically what the custody arrangement covers, with a clear FSCS disclaimer.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 7: Pre-Submission Checklist -->
+      <div class="section-block" id="web-sec7">
+        <div class="section-header" onclick="toggleSection('web-sec7')">
+          <div class="section-number">7</div>
+          <div class="section-title-group">
+            <div class="section-title">Pre-Submission Checklist</div>
+            <div class="section-ref">Complete Before Submitting</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>Use this checklist before submitting your website for review. Completing this internally will reduce the number of feedback rounds and speed up approval.</p>
+
+            <div class="checklist-section" id="webChecklistContainer">
+              <div class="checklist-category">Risk Warning Banner</div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>The prescribed FCA risk warning is included on every page (exact wording, not paraphrased)</span></div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>The risk warning banner is fixed at the top of the screen and does not scroll off</span></div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>The risk warning text is clearly legible &mdash; sufficient font size and contrast</span></div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>The risk warning is not dismissible (no close or X button)</span></div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>A clickable "Take 2 mins to learn more" link is included within the banner</span></div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>The risk summary page follows the structure prescribed in COBS 4 Annex 1R</span></div>
+
+              <div class="checklist-category">Approval Time Stamp</div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>The approval time stamp is present on every page (exact wording with Zeyro LTD FRN 1001386)</span></div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>The approval stamp refers to "financial promotions" &mdash; not "offers" or other terms</span></div>
+
+              <div class="checklist-category">Balancing Language</div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>Risk disclosures accompany every benefit claim, at equal prominence</span></div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>Asset-specific risk disclosures are included on all asset listing pages</span></div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>Service/product-specific risks are included where staking, lending, borrowing, or OTC services are promoted</span></div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>Past performance charts include a disclaimer and default to the "All Time" view</span></div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>APY or yield figures include a disclaimer that rates are variable and subject to change</span></div>
+
+              <div class="checklist-category">Fair, Clear and Not Misleading</div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>No unsubstantiated comparative or superlative claims</span></div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>No use of "secure", "guaranteed", or "protected" without specific substantiation</span></div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>No use of "easy", "simple", or "hassle-free" to describe crypto services</span></div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>Any reference to regulatory status includes a UK-specific disclaimer</span></div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>No claim that promotions are "FCA-approved" &mdash; they are approved by Zeyro as your s21 approver</span></div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>The customer journey reflects the full onboarding process including cooling-off period</span></div>
+              <div class="checklist-item"><div class="checklist-box" onclick="toggleWebCheck(this)"></div><span>All pages accessible to UK users have been included in the submission</span></div>
+            </div>
+
+            <div class="progress-bar-container" style="margin-top:24px;">
+              <div class="progress-bar"><div class="progress-fill" id="webProgressFill" style="width:0%"></div></div>
+              <div class="progress-text" id="webProgressText">0 of 20 items checked</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div class="page" id="page-crypto-appstore">
@@ -1801,7 +2212,7 @@
           <div style="display:flex; align-items:center; gap:16px; margin-bottom:24px; padding-bottom:20px; border-bottom:1px solid var(--border);">
             <div style="width:56px; height:56px; border-radius:14px; background:linear-gradient(135deg, var(--accent-dim), var(--accent)); display:flex; align-items:center; justify-content:center; font-size:24px; color:#072e22; font-weight:800;">N</div>
             <div>
-              <div style="font-size:18px; font-weight:700; color:var(--text-white);">NovaCoin: Digital Assets</div>
+              <div style="font-size:18px; font-weight:700; color:var(--text-white);">ZeyroCoin: Digital Assets</div>
               <div style="font-size:13px; color:var(--text-muted);">Details</div>
             </div>
           </div>
@@ -1817,13 +2228,13 @@
           <!-- Body with balancing language -->
           <div style="font-size:15px; color:var(--text-body); line-height:1.8;">
             <p style="margin-bottom:14px;"><strong style="color:var(--text-white);">Manage Your Digital Assets</strong></p>
-            <p style="margin-bottom:14px;">NovaCoin provides a platform for buying, selling, and managing cryptoassets. Access 200+ digital assets from one app. Cryptoassets are high-risk and can experience significant volatility, which may result in a loss of some or all of your investment.</p>
+            <p style="margin-bottom:14px;">ZeyroCoin provides a platform for buying, selling, and managing cryptoassets. Access 200+ digital assets from one app. Cryptoassets are high-risk and can experience significant volatility, which may result in a loss of some or all of your investment.</p>
 
             <p style="margin-bottom:14px;"><strong style="color:var(--text-white);">Earn Variable Rewards</strong></p>
             <p style="margin-bottom:14px;">Participate in staking with select supported assets. Rewards are variable and not guaranteed. Staked assets may be locked for a fixed period and may not be immediately accessible. You may be unable to withdraw, sell, or transfer them until the staking term ends. Rates are subject to change.</p>
 
             <p style="margin-bottom:14px;"><strong style="color:var(--text-white);">Spend With a Linked Card</strong></p>
-            <p style="margin-bottom:14px;">Use a NovaCoin-linked card for everyday purchases. Subject to regional availability and applicable terms and conditions.</p>
+            <p style="margin-bottom:14px;">Use a ZeyroCoin-linked card for everyday purchases. Subject to regional availability and applicable terms and conditions.</p>
 
             <p style="margin-bottom:14px;"><strong style="color:var(--text-white);">Please note:</strong></p>
             <p style="margin-bottom:14px;">Cryptoassets are highly volatile and prices can fluctuate significantly. The value of your holdings may go down as well as up. You could lose the entire value of your investment. These assets are not covered by the Financial Services Compensation Scheme.</p>
@@ -1974,6 +2385,16 @@
     const pct = Math.round((checked / total) * 100);
     document.getElementById('progressFill').style.width = pct + '%';
     document.getElementById('progressText').textContent = checked + ' of ' + total + ' items checked';
+  }
+
+  function toggleWebCheck(box) {
+    box.classList.toggle('checked');
+    box.parentElement.classList.toggle('checked-item');
+    const total = document.querySelectorAll('#webChecklistContainer .checklist-box').length;
+    const checked = document.querySelectorAll('#webChecklistContainer .checklist-box.checked').length;
+    const pct = Math.round((checked / total) * 100);
+    document.getElementById('webProgressFill').style.width = pct + '%';
+    document.getElementById('webProgressText').textContent = checked + ' of ' + total + ' items checked';
   }
 
   function toggleTheme() {
