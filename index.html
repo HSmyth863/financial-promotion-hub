@@ -926,9 +926,9 @@
         <div class="nav-item" data-page="crypto-appstore" onclick="showPage('crypto-appstore', this)">
           App Store Reviews <span class="nav-badge live">Live</span>
         </div>
-        <<div class="nav-item" onclick="window.location.href='app-reviews.html'">
-  App Reviews <span class="nav-badge live">Live</span>
-</div>
+        <div class="nav-item" onclick="window.location.href='app-reviews.html'">
+          App Reviews <span class="nav-badge live">Live</span>
+        </div>
         <div class="nav-item" data-page="crypto-social" onclick="showPage('crypto-social', this)">
           Social Media Reviews <span class="nav-badge soon">Soon</span>
         </div>
@@ -2414,7 +2414,10 @@
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-    showPage('crypto-onboarding', document.querySelector('[data-page=crypto-onboarding]'));
+    // Check for hash-based navigation (e.g. index.html#crypto-web)
+    var hash = window.location.hash.substring(1);
+    var targetPage = hash && document.querySelector('[data-page=' + hash + ']') ? hash : 'crypto-onboarding';
+    showPage(targetPage, document.querySelector('[data-page=' + targetPage + ']'));
     // Restore saved theme preference
     const saved = localStorage.getItem('zeyro-theme');
     if (saved === 'light') {
