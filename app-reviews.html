@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zeyro | App Reviews</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Michroma&family=Quicksand:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+  :root {
+    --bg-gradient-1: #0b3d2e;
+    --bg-gradient-2: #0a4a35;
+    --bg-gradient-3: #064030;
+    --bg-sidebar: #072e22;
+    --bg-sidebar-hover: #0a3d2d;
+    --bg-card: rgba(10, 60, 42, 0.6);
+    --bg-card-solid: #0c4530;
+    --bg-card-hover: #0e5238;
+    --bg-box: #0b3a2a;
+    --bg-box-alt: #0d4432;
+    --accent: #a8ff2e;
+    --accent-bright: #bfff5e;
+    --accent-dim: #7acc22;
+    --accent-glow: rgba(168, 255, 46, 0.12);
+    --accent-glow-strong: rgba(168, 255, 46, 0.25);
+    --text-white: #ffffff;
+    --text-light: #e0f0e8;
+    --text-body: #c8ddd0;
+    --text-muted: #8aad98;
+    --border: rgba(168, 255, 46, 0.15);
+    --border-bright: rgba(168, 255, 46, 0.3);
+    --border-box: rgba(168, 255, 46, 0.2);
+    --warning: #ffd666;
+    --error: #ff7b7b;
+    --info: #66d4ff;
+  }
+
+  body.light {
+    --bg-gradient-1: #f5f7f6; --bg-gradient-2: #eef2f0; --bg-gradient-3: #e8ece9;
+    --bg-sidebar: #ffffff; --bg-sidebar-hover: #f0f5f2;
+    --bg-card: rgba(240,245,242,0.9); --bg-card-solid: #f0f5f2; --bg-card-hover: #e8f0eb;
+    --bg-box: #f0f5f2; --bg-box-alt: #e8f0eb;
+    --accent: #0a7c52; --accent-bright: #0d9963; --accent-dim: #086b46;
+    --accent-glow: rgba(10,124,82,0.08); --accent-glow-strong: rgba(10,124,82,0.15);
+    --text-white: #1a2e24; --text-light: #2a3e34; --text-body: #4a5e54; --text-muted: #7a8e84;
+    --border: rgba(10,124,82,0.15); --border-bright: rgba(10,124,82,0.25); --border-box: rgba(10,124,82,0.18);
+    --warning: #c49000; --error: #d44; --info: #1a8cba;
+  }
+  body.light { background: linear-gradient(160deg,#f5f7f6 0%,#eef2f0 40%,#f0f5f2 70%,#e8ece9 100%) !important; color: var(--text-light); }
+  body.light .sidebar { background: linear-gradient(180deg,#ffffff 0%,#f5f9f7 100%) !important; border-right-color:#dde8e2; box-shadow:2px 0 12px rgba(0,0,0,0.06); }
+  body.light .topbar { background:rgba(255,255,255,0.92) !important; border-bottom-color:#dde8e2; }
+  body.light .logo { color:#0a7c52; }
+  body.light .logo-dot { background:#0a7c52; box-shadow:0 0 12px rgba(10,124,82,0.4); }
+  body.light .section-block { background:#ffffff !important; border:1px solid #c8d8cf !important; box-shadow:0 2px 8px rgba(0,0,0,0.05); }
+  body.light .section-header { border-bottom-color:#dde8e2 !important; }
+  body.light .section-number { background:rgba(10,124,82,0.12) !important; color:#0a7c52 !important; }
+  body.light .callout { background:#ffffff !important; border-color:#c8d8cf !important; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
+  body.light .callout.rule { border-left:4px solid #0a7c52 !important; }
+  body.light .callout.tip { border-left:4px solid #1a8cba !important; }
+  body.light .callout.warning { border-left:4px solid #c49000 !important; }
+  body.light .callout.example { border-left:4px solid #0d9963 !important; }
+  body.light .comparison-table { border-color:#dde8e2 !important; }
+  body.light .comparison-table th { background:#f0f5f2 !important; }
+  body.light .comparison-table td { border-color:#eef2f0 !important; background:#ffffff !important; }
+  body.light .risk-table th { background:#f0f5f2 !important; }
+  body.light .risk-table td { border-color:#eef2f0 !important; }
+  body.light .nav-item.active { background:rgba(10,124,82,0.08) !important; color:#0a7c52 !important; border-left-color:#0a7c52 !important; }
+  body.light .nav-section-header.active { color:#0a7c52 !important; border-left-color:#0a7c52 !important; background:rgba(10,124,82,0.06) !important; }
+  body.light .nav-badge.live { background:rgba(10,124,82,0.12) !important; color:#0a7c52 !important; }
+  body.light .checklist-box { border-color:#c8d4cc !important; }
+  body.light .key-point { background:#ffffff !important; border:1px solid #c8d8cf !important; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
+
+  .theme-toggle { display:flex; align-items:center; gap:10px; padding:14px 24px; cursor:pointer; border-top:1px solid var(--border); color:var(--text-muted); font-size:14px; transition:all 0.2s; }
+  .theme-toggle:hover { color:var(--text-white); background:var(--accent-glow); }
+  .theme-toggle-icon { font-size:18px; width:24px; text-align:center; }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    font-family: 'Quicksand','Inter',-apple-system,sans-serif;
+    background: linear-gradient(160deg,#072e22 0%,#0b4a35 40%,#0a3d2e 70%,#083828 100%);
+    background-attachment: fixed;
+    color: var(--text-light);
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-size: 17px;
+    transition: background 0.4s ease, color 0.3s ease;
+  }
+
+  /* ── Sidebar ── */
+  .sidebar {
+    position: fixed; top:0; left:0;
+    width: 290px; height:100vh;
+    background: linear-gradient(180deg,#062a1e 0%,#083a2a 100%);
+    border-right: 1px solid var(--border);
+    display: flex; flex-direction:column;
+    z-index: 100; transition: transform 0.3s ease;
+  }
+  .sidebar-header { padding:28px 24px; border-bottom:1px solid var(--border); }
+  .logo { font-family:'Michroma',monospace; font-size:26px; font-weight:700; color:var(--accent); letter-spacing:2px; display:flex; align-items:center; gap:10px; }
+  .logo-dot { width:10px; height:10px; background:var(--accent); border-radius:2px; box-shadow:0 0 12px var(--accent); }
+  .sidebar-subtitle { font-size:12px; color:var(--text-muted); text-transform:uppercase; letter-spacing:2px; margin-top:8px; }
+  .sidebar-nav { flex:1; overflow-y:auto; padding:20px 0; }
+  .nav-section { margin-bottom:6px; }
+  .nav-section-header { display:flex; align-items:center; gap:12px; padding:12px 24px; font-size:14px; font-weight:600; color:var(--text-body); text-transform:uppercase; letter-spacing:1.2px; cursor:pointer; transition:all 0.2s; border-left:3px solid transparent; }
+  .nav-section-header:hover { color:var(--text-white); background:rgba(168,255,46,0.05); }
+  .nav-section-header.active { color:var(--accent); border-left-color:var(--accent); background:var(--accent-glow); }
+  .nav-section-header .arrow { margin-left:auto; transition:transform 0.3s; font-size:11px; }
+  .nav-section-header.expanded .arrow { transform:rotate(90deg); }
+  .nav-items { max-height:0; overflow:hidden; transition:max-height 0.4s ease; }
+  .nav-items.open { max-height:500px; }
+  .nav-item { display:flex; align-items:center; gap:10px; padding:11px 24px 11px 48px; font-size:14px; color:var(--text-muted); cursor:pointer; transition:all 0.2s; border-left:3px solid transparent; }
+  .nav-item:hover { color:var(--text-white); background:rgba(168,255,46,0.04); }
+  .nav-item.active { color:var(--accent); background:var(--accent-glow); border-left-color:var(--accent); }
+  .nav-badge { font-size:10px; padding:3px 8px; border-radius:10px; margin-left:auto; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; }
+  .nav-badge.live { background:rgba(168,255,46,0.18); color:var(--accent); }
+  .nav-badge.soon { background:rgba(138,173,152,0.15); color:var(--text-muted); }
+
+  /* ── Main ── */
+  .main { margin-left:290px; min-height:100vh; }
+  .topbar { position:sticky; top:0; padding:18px 44px; background:rgba(7,46,34,0.88); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); z-index:50; }
+  .breadcrumb { font-size:14px; color:var(--text-muted); }
+  .breadcrumb span { color:var(--text-body); }
+  .breadcrumb .current { color:var(--accent); font-weight:500; }
+  .content-area { padding:48px; max-width:1100px; }
+
+  /* ── Page header ── */
+  .page-header { margin-bottom:44px; padding-bottom:28px; border-bottom:1px solid var(--border); }
+  .page-label { font-size:14px; text-transform:uppercase; letter-spacing:2.5px; color:var(--accent); font-weight:600; margin-bottom:10px; }
+  .page-title { font-family:'Michroma',sans-serif; font-size:40px; font-weight:700; color:var(--text-white); margin-bottom:16px; }
+  .page-intro { font-size:17px; color:var(--text-body); line-height:1.8; max-width:780px; }
+
+  /* ── Key points ── */
+  .key-points { display:flex; flex-direction:column; gap:12px; margin-bottom:40px; }
+  .key-point { display:flex; align-items:center; gap:12px; padding:14px 22px; background:linear-gradient(135deg,var(--bg-box),var(--bg-box-alt)); border:1px solid var(--border-box); border-radius:12px; font-size:15px; color:var(--text-body); }
+  .key-point .kp-icon { color:var(--accent); font-size:18px; }
+
+  /* ── Section blocks ── */
+  .section-block { background:linear-gradient(145deg,rgba(11,58,42,0.7),rgba(13,68,50,0.5)); border:1px solid var(--border-box); border-radius:20px; margin-bottom:28px; overflow:hidden; transition:border-color 0.3s; backdrop-filter:blur(4px); }
+  .section-block:hover { border-color:var(--border-bright); }
+  .section-header { display:flex; align-items:center; gap:18px; padding:26px 32px; cursor:pointer; transition:background 0.2s; }
+  .section-header:hover { background:rgba(168,255,46,0.03); }
+  .section-number { width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,var(--accent),var(--accent-dim)); color:#072e22; display:flex; align-items:center; justify-content:center; font-family:'Michroma',sans-serif; font-size:20px; font-weight:700; flex-shrink:0; }
+  .section-title-group { flex:1; }
+  .section-title { font-family:'Michroma',sans-serif; font-size:22px; font-weight:600; color:var(--accent); }
+  .section-ref { font-size:13px; color:var(--accent-bright); font-family:'Michroma',monospace; margin-top:3px; opacity:0.7; }
+  .section-toggle { font-size:22px; color:var(--text-muted); transition:transform 0.3s; }
+  .section-block.open .section-toggle { transform:rotate(180deg); }
+  .section-content { max-height:0; overflow:hidden; transition:max-height 0.5s ease; }
+  .section-block.open .section-content { max-height:6000px; }
+  .section-body { padding:0 32px 32px; border-top:1px solid var(--border); padding-top:28px; }
+  .section-body p { font-size:16px; color:var(--text-body); line-height:1.85; margin-bottom:18px; }
+  .section-body ul { list-style:none; margin-bottom:18px; }
+  .section-body ul li { position:relative; padding-left:24px; font-size:16px; color:var(--text-body); line-height:1.8; margin-bottom:10px; }
+  .section-body ul li::before { content:'›'; position:absolute; left:0; color:var(--accent); font-weight:700; font-size:18px; }
+  .section-body ul li strong { color:var(--text-white); }
+
+  /* ── Callouts ── */
+  .callout { padding:24px 28px; border-radius:16px; margin:24px 0; border-left:4px solid; font-size:16px; line-height:1.8; }
+  .callout.rule { background:linear-gradient(135deg,rgba(168,255,46,0.08),rgba(168,255,46,0.03)); border-color:var(--accent); color:var(--text-body); }
+  .callout.tip { background:linear-gradient(135deg,rgba(102,212,255,0.08),rgba(102,212,255,0.03)); border-color:var(--info); color:var(--text-body); }
+  .callout.warning { background:linear-gradient(135deg,rgba(255,214,102,0.08),rgba(255,214,102,0.03)); border-color:var(--warning); color:var(--text-body); }
+  .callout.example { background:linear-gradient(135deg,rgba(168,255,46,0.06),rgba(168,255,46,0.02)); border-color:var(--accent-dim); color:var(--text-body); font-style:italic; }
+  .callout-label { font-size:13px; text-transform:uppercase; letter-spacing:1.8px; font-weight:700; margin-bottom:10px; font-style:normal; }
+  .callout.rule .callout-label { color:var(--accent); }
+  .callout.tip .callout-label { color:var(--info); }
+  .callout.warning .callout-label { color:var(--warning); }
+  .callout.example .callout-label { color:var(--accent-dim); }
+
+  /* ── Sub labels ── */
+  .sub-label { display:inline-block; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:1.2px; padding:5px 14px; border-radius:6px; margin-bottom:14px; }
+  .sub-label.green { background:var(--accent-glow-strong); color:var(--accent); }
+
+  /* ── Comparison table ── */
+  .comparison-table { width:100%; border-collapse:separate; border-spacing:0; border-radius:16px; overflow:hidden; margin:24px 0; font-size:15px; }
+  .comparison-table th { background:rgba(7,46,34,0.8); padding:16px 20px; text-align:left; font-weight:600; font-size:16px; color:var(--text-white); border-bottom:2px solid var(--border); }
+  .comparison-table th.good { color:var(--accent); }
+  .comparison-table th.bad { color:var(--error); }
+  .comparison-table td { padding:14px 20px; color:var(--text-body); border-bottom:1px solid var(--border); line-height:1.7; vertical-align:top; }
+  .comparison-table tr:last-child td { border-bottom:none; }
+  .comparison-table tr:hover td { background:rgba(168,255,46,0.03); }
+  .check { color:var(--accent); margin-right:8px; font-weight:700; }
+  .cross { color:var(--error); margin-right:8px; font-weight:700; }
+
+  /* ── Risk table ── */
+  .risk-table { width:100%; border-collapse:separate; border-spacing:0; border-radius:16px; overflow:hidden; margin:16px 0 24px; font-size:15px; }
+  .risk-table th { background:rgba(7,46,34,0.8); padding:14px 20px; text-align:left; font-weight:600; font-size:15px; color:var(--text-white); border-bottom:2px solid var(--border); font-family:'Michroma',sans-serif; }
+  .risk-table th:first-child { width:28%; }
+  .risk-table td { padding:13px 20px; color:var(--text-body); border-bottom:1px solid var(--border); line-height:1.7; vertical-align:top; }
+  .risk-table td:first-child { color:var(--text-white); font-weight:600; }
+  .risk-table tr:last-child td { border-bottom:none; }
+  .risk-table tr:hover td { background:rgba(168,255,46,0.03); }
+
+  /* ── Phrase table ── */
+  .phrase-table { width:100%; border-collapse:separate; border-spacing:0; border-radius:16px; overflow:hidden; margin:24px 0; font-size:15px; }
+  .phrase-table th { background:rgba(7,46,34,0.8); padding:14px 20px; text-align:left; font-weight:600; font-size:15px; color:var(--text-white); border-bottom:2px solid var(--border); }
+  .phrase-table td { padding:14px 20px; color:var(--text-body); border-bottom:1px solid var(--border); line-height:1.7; vertical-align:top; }
+  .phrase-table tr:last-child td { border-bottom:none; }
+  .phrase-table tr:hover td { background:rgba(168,255,46,0.03); }
+  .phrase-table .bad-cell { color:var(--error); }
+  .phrase-table .good-cell { color:var(--accent); }
+
+  /* ── General note ── */
+  .general-note { background:linear-gradient(135deg,rgba(102,212,255,0.08),rgba(102,212,255,0.03)); border:1px solid var(--border-box); border-left:4px solid var(--info); border-radius:16px; padding:20px 26px; margin-bottom:36px; font-size:16px; color:var(--text-body); line-height:1.8; }
+  .general-note .gnote-label { font-size:12px; text-transform:uppercase; letter-spacing:1.8px; font-weight:700; color:var(--info); margin-bottom:8px; }
+
+  /* ── Checklist ── */
+  .checklist-section { margin:24px 0; }
+  .checklist-category { font-size:17px; font-weight:700; color:var(--accent); margin:20px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--border); font-family:'Michroma',sans-serif; }
+  .checklist-item { display:flex; align-items:flex-start; gap:14px; padding:12px 0; font-size:15px; color:var(--text-body); line-height:1.7; border-bottom:1px solid rgba(168,255,46,0.07); }
+  .checklist-box { width:24px; height:24px; border:2px solid var(--border-bright); border-radius:6px; flex-shrink:0; margin-top:2px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.2s; }
+  .checklist-box:hover { border-color:var(--accent); background:var(--accent-glow); }
+  .checklist-box.checked { background:var(--accent); border-color:var(--accent); }
+  .checklist-box.checked::after { content:'\2713'; color:#072e22; font-size:14px; font-weight:800; }
+  .checklist-item.checked-item span { text-decoration:line-through; color:var(--text-muted); }
+  .progress-bar-container { background:rgba(7,46,34,0.6); border-radius:20px; height:10px; margin:18px 0; overflow:hidden; border:1px solid var(--border); }
+  .progress-bar-fill { height:100%; background:linear-gradient(90deg,var(--accent-dim),var(--accent)); border-radius:20px; transition:width 0.5s ease; box-shadow:0 0 10px rgba(168,255,46,0.3); }
+  .progress-text { font-size:14px; color:var(--text-muted); text-align:right; margin-top:6px; }
+
+  /* ── Mobile ── */
+  .mobile-toggle { display:none; position:fixed; top:14px; left:14px; z-index:200; width:44px; height:44px; background:var(--bg-card-solid); border:1px solid var(--border); border-radius:12px; color:var(--accent); font-size:22px; cursor:pointer; align-items:center; justify-content:center; }
+  @media (max-width:768px) { .sidebar{transform:translateX(-100%)} .sidebar.open{transform:translateX(0)} .main{margin-left:0} .mobile-toggle{display:flex} .content-area{padding:24px} .page-title{font-size:28px} }
+
+  .fade-in { animation:fadeIn 0.4s ease forwards; }
+  @keyframes fadeIn { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+  ::-webkit-scrollbar { width:7px; }
+  ::-webkit-scrollbar-track { background:#062a1e; }
+  ::-webkit-scrollbar-thumb { background:var(--border-bright); border-radius:4px; }
+  ::-webkit-scrollbar-thumb:hover { background:var(--accent-dim); }
+</style>
+</head>
+<body>
+
+<button class="mobile-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">&#9776;</button>
+
+<!-- ── Sidebar ── -->
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <div class="logo"><span class="logo-dot"></span> zeyro</div>
+    <div class="sidebar-subtitle">Financial Promotion Learning Hub</div>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section">
+      <div class="nav-section-header" onclick="window.location.href='index.html'">
+        <span>&#11045;</span> Overview
+      </div>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-header expanded" onclick="toggleNav(this)">
+        <span>&#9670;</span> Crypto <span class="arrow">&#9656;</span>
+      </div>
+      <div class="nav-items open">
+        <div class="nav-item" onclick="window.location.href='web-reviews.html'">Web Reviews <span class="nav-badge live">Live</span></div>
+        <div class="nav-item" onclick="window.location.href='app-store-reviews.html'">App Store Reviews <span class="nav-badge live">Live</span></div>
+        <div class="nav-item active">App Reviews <span class="nav-badge live">Live</span></div>
+        <div class="nav-item" onclick="window.location.href='social-media.html'">Social Media Reviews <span class="nav-badge soon">Soon</span></div>
+        <div class="nav-item" onclick="window.location.href='onboarding-frictions.html'">Onboarding Frictions <span class="nav-badge live">Live</span></div>
+      </div>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-header" onclick="toggleNav(this)">
+        <span>&#9671;</span> Funds <span class="arrow">&#9656;</span>
+      </div>
+      <div class="nav-items">
+        <div class="nav-item">Fact Sheets <span class="nav-badge soon">Soon</span></div>
+        <div class="nav-item">Prospectus / Supplements <span class="nav-badge soon">Soon</span></div>
+        <div class="nav-item">Presentations <span class="nav-badge soon">Soon</span></div>
+        <div class="nav-item">Quarterly Commentary <span class="nav-badge soon">Soon</span></div>
+      </div>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-header" onclick="toggleNav(this)">
+        <span>&#9651;</span> CETN <span class="arrow">&#9656;</span>
+      </div>
+      <div class="nav-items">
+        <div class="nav-item">Overview <span class="nav-badge soon">Soon</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <span class="theme-toggle-icon" id="themeIcon">&#9788;</span>
+    <span id="themeLabel">Light Mode</span>
+  </div>
+</nav>
+
+<!-- ── Main ── -->
+<main class="main">
+  <div class="topbar">
+    <div class="breadcrumb">Financial Promotions &#8250; <span>Cryptoasset Promotions</span> &#8250; <span class="current">App Reviews</span></div>
+  </div>
+
+  <div class="content-area">
+
+    <div class="page-header fade-in">
+      <div class="page-label">Cryptoasset Promotions</div>
+      <div class="page-title">App Review Compliance</div>
+      <p class="page-intro">A practical compliance guide for preparing in-app financial promotions for submission and approval. Covers all screens accessible to UK users — from login through to trading and product flows.</p>
+    </div>
+
+    <div class="key-points fade-in">
+      <div class="key-point"><span class="kp-icon">&#11045;</span> Zeyro reviews every screen accessible to UK users — including pre-login, onboarding, trading, and product flows</div>
+      <div class="key-point"><span class="kp-icon">&#11045;</span> Submissions are typically made via Figma file or PDF flow export</div>
+      <div class="key-point"><span class="kp-icon">&#11045;</span> This guide applies to all screens, not just the home page or sign-up flow</div>
+    </div>
+
+    <div class="general-note">
+      <div class="gnote-label">&#127758; A Note on Identifying UK Users</div>
+      The FCA financial promotion regime applies to promotions directed at UK users. The primary method for identifying UK users should be geolocation via IP detection. Citizenship alone is less reliable — a UK citizen living abroad would typically be subject to the regulations of their country of residence. Firms must have a clear, documented mechanism for identifying and applying UK regulatory requirements to the correct user cohort.
+    </div>
+
+    <!-- This Guide Covers -->
+    <div class="callout rule" style="margin-bottom:36px;">
+      <div class="callout-label">This Guide Covers Ten Core Areas</div>
+      <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;">
+        <li style="padding:4px 0;color:var(--text-body);font-size:15px;">&#8250; <strong style="color:var(--text-white)">1.</strong> What Is an App Financial Promotion</li>
+        <li style="padding:4px 0;color:var(--text-body);font-size:15px;">&#8250; <strong style="color:var(--text-white)">2.</strong> The Risk Warning Banner</li>
+        <li style="padding:4px 0;color:var(--text-body);font-size:15px;">&#8250; <strong style="color:var(--text-white)">3.</strong> The Approval Time Stamp</li>
+        <li style="padding:4px 0;color:var(--text-body);font-size:15px;">&#8250; <strong style="color:var(--text-white)">4.</strong> Balancing Language</li>
+        <li style="padding:4px 0;color:var(--text-body);font-size:15px;">&#8250; <strong style="color:var(--text-white)">5.</strong> Asset-Specific Risks</li>
+        <li style="padding:4px 0;color:var(--text-body);font-size:15px;">&#8250; <strong style="color:var(--text-white)">6.</strong> Service / Product-Specific Risks</li>
+        <li style="padding:4px 0;color:var(--text-body);font-size:15px;">&#8250; <strong style="color:var(--text-white)">7.</strong> Sensitive Words &amp; Misleading Claims</li>
+        <li style="padding:4px 0;color:var(--text-body);font-size:15px;">&#8250; <strong style="color:var(--text-white)">8.</strong> Referral Programmes &amp; Incentives</li>
+        <li style="padding:4px 0;color:var(--text-body);font-size:15px;">&#8250; <strong style="color:var(--text-white)">9.</strong> Customer Journey Accuracy</li>
+        <li style="padding:4px 0;color:var(--text-body);font-size:15px;">&#8250; <strong style="color:var(--text-white)">10.</strong> The Back-End Frictions Flow</li>
+      </ul>
+    </div>
+
+    <!-- SECTION 1 -->
+    <div class="section-block open" id="sec1">
+      <div class="section-header" onclick="toggleSection('sec1')">
+        <div class="section-number">1</div>
+        <div class="section-title-group">
+          <div class="section-title">What Constitutes an App Financial Promotion</div>
+          <div class="section-ref">FSMA 2000 s.21 / COBS 4.12A</div>
+        </div>
+        <div class="section-toggle">&#9662;</div>
+      </div>
+      <div class="section-content">
+        <div class="section-body">
+          <p>A financial promotion is any communication that is an invitation or inducement to engage in investment activity. In the context of a crypto app, this applies broadly — it is not limited to dedicated marketing screens.</p>
+          <ul>
+            <li><strong>Pre-login and sign-up screens</strong> — any headline, strapline, or feature description visible before a user is authenticated</li>
+            <li><strong>Login screens</strong> — benefit claims or product descriptions displayed on the login page</li>
+            <li><strong>Home page / dashboard</strong> — asset listings, rate quotes, feature cards, and promotional banners</li>
+            <li><strong>Asset listing pages</strong> — individual token pages showing price, description, and buy/sell options</li>
+            <li><strong>Product screens</strong> — staking, earn, borrow, swap, or any yield-generating feature</li>
+            <li><strong>Account centre and tier/benefit pages</strong> — where membership benefits or features are promoted</li>
+            <li><strong>Transactional review screens</strong> — where asset risks must be present before confirmation</li>
+            <li><strong>Push notifications and in-app messages</strong> — where submitted as part of the approval (separate ticket required)</li>
+          </ul>
+          <div class="sub-label green">Screens That Are Not Financial Promotions</div>
+          <p>Pure utility screens with no promotional content — such as KYC document upload screens, settings menus, or transaction history pages — are generally not financial promotions provided they contain no benefit claims, rate quotes, or product descriptions. If in doubt, include them in your submission; Zeyro will confirm their status.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="section-block" id="sec2">
+      <div class="section-header" onclick="toggleSection('sec2')">
+        <div class="section-number">2</div>
+        <div class="section-title-group">
+          <div class="section-title">The Risk Warning Banner</div>
+          <div class="section-ref">COBS 4.12A.10R / COBS 4.12A.11R / COBS 4.12A.39</div>
+        </div>
+        <div class="section-toggle">&#9662;</div>
+      </div>
+      <div class="section-content">
+        <div class="section-body">
+          <div class="callout rule">
+            <div class="callout-label">Prescribed Wording — COBS 4.12A.11R</div>
+            "Don't invest unless you're prepared to lose all the money you invest. This is a high-risk investment and you should not expect to be protected if something goes wrong. Take 2 mins to learn more"
+          </div>
+          <p>The <strong style="color:var(--text-white)">"Take 2 mins to learn more"</strong> link must direct users to a risk summary page following the structure in COBS 4 Annex 1R. The link text must be exact — do not rephrase it.</p>
+
+          <div class="sub-label green">Placement</div>
+          <p>The banner must appear at the top of each app screen that is a financial promotion — below any fixed navigation bar but above all other content. It must not scroll off the screen as the user scrolls down. Confirm in your submission that the banner remains fixed and visible throughout the scroll journey.</p>
+
+          <div class="sub-label green">App-Specific Prominence Issues</div>
+          <p>In-app environments introduce specific design challenges that frequently lead to compliance failures. The following are the most common issues flagged during app reviews:</p>
+
+          <table class="comparison-table">
+            <thead><tr><th class="good">✓ Compliant</th><th class="bad">✗ Non-Compliant</th></tr></thead>
+            <tbody>
+              <tr><td><span class="check">✓</span>Risk warning banner in a clearly defined, distinctly coloured band that contrasts with the surrounding UI</td><td><span class="cross">✗</span>Grey banner on a grey or dark background — this fails the prominence requirement even where grey is a brand colour</td></tr>
+              <tr><td><span class="check">✓</span>Banner text in a legible font size matching or exceeding the standard body text used elsewhere in the app</td><td><span class="cross">✗</span>A coloured UI element placed directly above the banner that reduces the visual separation between the banner and the content above it</td></tr>
+              <tr><td><span class="check">✓</span>Banner fixed at the top of the screen and visible as the user scrolls through the page</td><td><span class="cross">✗</span>Banner visible only at the top of the initial screen load, scrolling off as the user moves down</td></tr>
+              <tr><td><span class="check">✓</span>Banner applied to all screens that constitute financial promotions, including post-login screens, asset listings, and product pages</td><td><span class="cross">✗</span>Banner present on sign-up and pre-login screens only, absent from home page or trading screens</td></tr>
+              <tr><td><span class="check">✓</span>Shaded border or background applied to the risk warning to increase visual separation from surrounding content</td><td><span class="cross">✗</span>Banner displayed without sufficient contrast — blending into the app's dark-mode or brand colour scheme</td></tr>
+            </tbody>
+          </table>
+
+          <div class="callout warning">
+            <div class="callout-label">Real Example from Our Reviews</div>
+            One app used a grey banner on a dark-themed interface, arguing it was consistent with brand guidelines. This does not satisfy the FCA's prominence requirement under COBS 4.12A.39 — the banner must stand out from the surrounding content, regardless of brand colour preferences. The issue required remediation before approval.
+          </div>
+          <div class="callout warning">
+            <div class="callout-label">Real Example from Our Reviews</div>
+            Another submission placed a brightly coloured UI element directly above the risk warning banner, reducing the visual separation between the two. We recommended adjusting the colour of that element to provide clearer visual separation and ensure the risk warning remained sufficiently prominent.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="section-block" id="sec3">
+      <div class="section-header" onclick="toggleSection('sec3')">
+        <div class="section-number">3</div>
+        <div class="section-title-group">
+          <div class="section-title">The Approval Time Stamp</div>
+          <div class="section-ref">COBS 4.10.7A</div>
+        </div>
+        <div class="section-toggle">&#9662;</div>
+      </div>
+      <div class="section-content">
+        <div class="section-body">
+          <p>Under COBS 4.10.7A, every financial promotion must display the name of the approving firm and the date of approval with sufficient prominence. For app screens, this stamp must appear on every screen that contains the risk warning banner.</p>
+          <div class="callout rule">
+            <div class="callout-label">Prescribed Wording</div>
+            "This Financial Promotion has been approved by Zeyro LTD (FRN 1001386) on [DATE]"
+          </div>
+          <p>Replace <strong style="color:var(--text-white)">[DATE]</strong> with the date on which Zeyro provided written approval. Do not use a placeholder or leave the field blank when publishing. The wording must refer specifically to "financial promotions" — not "content", "offers", or any other term.</p>
+          <div class="sub-label green">Placement in App Screens</div>
+          <p>The approval time stamp is typically placed at the bottom of each app screen, or within a visible footer element, below the main content. It must be clearly legible — not in a font size smaller than the surrounding text, and not in a colour that blends with the background.</p>
+          <p>Where an app is submitted via Figma, the time stamp should be added to all relevant screens in the final approved flow before publication. Screens submitted for review without the time stamp will require it to be added before the promotion goes live.</p>
+          <div class="callout tip">
+            <div class="callout-label">Updating After Changes</div>
+            If your app content changes after initial approval, you must resubmit the updated screens. Where changes are minor and within the scope of the originally approved content, Zeyro will confirm on a case-by-case basis whether the original approval date can be retained. Do not update the live time stamp date without written confirmation from Zeyro.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="section-block" id="sec4">
+      <div class="section-header" onclick="toggleSection('sec4')">
+        <div class="section-number">4</div>
+        <div class="section-title-group">
+          <div class="section-title">Balancing Language</div>
+          <div class="section-ref">COBS 4.2.1R</div>
+        </div>
+        <div class="section-toggle">&#9662;</div>
+      </div>
+      <div class="section-content">
+        <div class="section-body">
+          <p>Every benefit claim, feature description, or rate quote in your app must be accompanied by appropriately balanced risk disclosure. The general risk warning banner alone does not satisfy this requirement — specific, contextualised risk language must appear alongside the relevant content throughout the body of your app screens.</p>
+          <p>The key question to ask for each screen: <em style="color:var(--text-white)">for every benefit described here, is there a corresponding risk the user needs to understand?</em> That risk information must appear in proximity to the benefit — not only in the footer, the risk summary, or a separate page.</p>
+          <div class="sub-label green">Core Principles</div>
+          <ul>
+            <li>Risk disclosures must be presented with <strong>equal prominence</strong> to the benefits they accompany — this means matching font size, weight, and visibility</li>
+            <li>Risk information must not be hidden, de-emphasised, or grouped at the bottom of a screen where a user might not see it</li>
+            <li>Where benefits are described using bold text or large font, the accompanying risk language must be equally visible — not in small grey text beneath</li>
+            <li>Risk language must be specific to the feature being described — generic disclaimers are not sufficient</li>
+          </ul>
+          <div class="sub-label green">Placement</div>
+          <p>Risk disclosures must appear in proximity to the relevant feature or claim — not only in the footer or on a separate page. Where a benefit is promoted in a card or module within the app, the risk disclaimer should be immediately adjacent or directly beneath that element.</p>
+          <p>Risk language placed in a hover tooltip or behind a "learn more" link is generally not acceptable as the primary disclosure. Where an asterisk (*) is used to flag a footnote, the associated risk text must appear on the same screen — not only in the terms and conditions.</p>
+          <table class="comparison-table">
+            <thead><tr><th class="good">✓ Compliant</th><th class="bad">✗ Non-Compliant</th></tr></thead>
+            <tbody>
+              <tr><td><span class="check">✓</span>"Earn up to 15% APY on select tokens. Rate variable and subject to change. APY is not guaranteed and depends on market conditions. You could lose money."</td><td><span class="cross">✗</span>"Earn up to 15% APY on select tokens." — risk disclaimer buried in footer in small grey text</td></tr>
+              <tr><td><span class="check">✓</span>Risk language displayed in the same font size and weight as benefit text, directly beneath the feature description</td><td><span class="cross">✗</span>Risk language displayed in a small font beneath a large headline, making it visually subordinate to the benefit claim</td></tr>
+              <tr><td><span class="check">✓</span>APY asterisk footnote visible on the same screen as the rate figure</td><td><span class="cross">✗</span>APY asterisk with footnote explanation only accessible via a link to terms and conditions</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 5 -->
+    <div class="section-block" id="sec5">
+      <div class="section-header" onclick="toggleSection('sec5')">
+        <div class="section-number">5</div>
+        <div class="section-title-group">
+          <div class="section-title">Asset-Specific Risks</div>
+          <div class="section-ref">COBS 4.2.1R / COBS 4.12A</div>
+        </div>
+        <div class="section-toggle">&#9662;</div>
+      </div>
+      <div class="section-content">
+        <div class="section-body">
+          <p>Where your app refers to or promotes specific types of cryptoasset, you must include risk disclosures tailored to that asset type. A general risk warning is not sufficient where specific assets are being promoted. The risks must be <strong style="color:var(--text-white)">fully visible on the relevant screen</strong> — they cannot be hidden behind expand buttons, "read more" links, or separate pages.</p>
+
+          <div class="sub-label green">Baseline Risks — Applicable to All Cryptoassets</div>
+          <table class="risk-table">
+            <thead><tr><th>Risk</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>Investment risk</td><td>The value of cryptoassets can be extremely volatile. Prices may fall just as quickly as they rise, and you could lose all of the money you invest.</td></tr>
+              <tr><td>Lack of protections</td><td>Cryptoassets are largely unregulated. You will not be protected by the FSCS or the FOS if something goes wrong.</td></tr>
+              <tr><td>Selling your investment</td><td>You may not always be able to sell your cryptoassets when you want. Market conditions or operational factors may affect your ability to exit.</td></tr>
+              <tr><td>Cryptoassets are complex</td><td>It may not always be clear how a cryptoasset works or what factors influence its value. Take time to understand the product before investing.</td></tr>
+              <tr><td>Diversification</td><td>It is good practice not to invest more than 10% of your money in high-risk investments such as cryptoassets.</td></tr>
+            </tbody>
+          </table>
+
+          <div class="sub-label green">DeFi Token Risks</div>
+          <table class="risk-table">
+            <thead><tr><th>Risk</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>Smart contract risk</td><td>DeFi relies on smart contracts. Even small coding errors or bugs can lead to exploits, potentially resulting in the loss of all invested funds.</td></tr>
+              <tr><td>Regulatory risk</td><td>DeFi protocols often operate without intermediaries or standard compliance controls. Future regulation may restrict access or significantly affect the value of DeFi tokens.</td></tr>
+              <tr><td>Rug pulls and exit scams</td><td>Some DeFi projects are launched by anonymous teams, increasing the risk of developers abandoning or fraudulently exiting a project with investor funds.</td></tr>
+              <tr><td>Data / oracle risk</td><td>DeFi platforms depend on external data sources for pricing and execution. If these are manipulated or fail, the platform may behave in unexpected ways.</td></tr>
+              <tr><td>Protocol complexity</td><td>Many DeFi systems are difficult to understand even for experienced investors. You should not invest in DeFi products you do not fully understand.</td></tr>
+            </tbody>
+          </table>
+
+          <div class="sub-label green">Memecoin Risks</div>
+          <table class="risk-table">
+            <thead><tr><th>Risk</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>Volatility risk</td><td>Memecoins often experience extreme and unpredictable price swings, heavily influenced by social media trends and celebrity endorsements.</td></tr>
+              <tr><td>Lack of utility</td><td>Memecoins often lack intrinsic value and utility, relying on community interest and online trends to sustain their value.</td></tr>
+              <tr><td>Market manipulation</td><td>Memecoins are susceptible to "pump-and-dump" schemes and coordinated price manipulation.</td></tr>
+              <tr><td>Community-driven risks</td><td>These tokens rely on community participation without formal governance structures. If community interest declines, the value may fall rapidly.</td></tr>
+              <tr><td>Emotional investing</td><td>Memecoins attract strong emotional responses and viral excitement, which can lead to impulsive or irrational investment decisions.</td></tr>
+            </tbody>
+          </table>
+
+          <div class="sub-label green">Stablecoin Risks</div>
+          <table class="risk-table">
+            <thead><tr><th>Risk</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>Counterparty risk</td><td>If the stablecoin is backed by reserves, a third party is responsible for holding and managing those reserves. If they fail or act improperly, the peg may collapse.</td></tr>
+              <tr><td>Redemption risk</td><td>The ability to redeem an asset for its underlying collateral may not function as expected, especially during periods of market stress or high demand.</td></tr>
+              <tr><td>Collateral risk</td><td>Some stablecoins are backed by other cryptoassets. If the value of the collateral falls significantly, the stablecoin may lose its peg.</td></tr>
+              <tr><td>Foreign exchange (FX) risk</td><td>Many stablecoins are pegged to fiat currencies, exposing you to movements in exchange rates relative to your home currency.</td></tr>
+              <tr><td>Algorithmic risk</td><td>Stablecoins that rely on algorithms or smart contracts to maintain their peg can fail due to flawed design or sudden market conditions.</td></tr>
+            </tbody>
+          </table>
+
+          <div class="sub-label green">Wrapped Token Risks</div>
+          <table class="risk-table">
+            <thead><tr><th>Risk</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>Smart contract risk</td><td>Wrapped tokens depend on smart contracts to maintain their link to the underlying asset. If the contract is exploited or has errors, you could lose your funds.</td></tr>
+              <tr><td>Collateral risk</td><td>The value of a wrapped token is typically backed by an equivalent amount of the underlying asset. If the backing mechanism fails, the wrapped token may lose its value.</td></tr>
+              <tr><td>Custodial risk</td><td>Many wrapped tokens rely on a third-party custodian to hold the original asset. If this custodian is hacked, becomes insolvent, or acts improperly, the wrapped token may become worthless.</td></tr>
+              <tr><td>Bridging risk</td><td>Wrapped tokens are often created through cross-chain bridges. These bridges can be vulnerable to technical failures or exploits.</td></tr>
+              <tr><td>Price divergence risk</td><td>Although designed to mirror the value of the original asset, the wrapped token may trade at a premium or discount during periods of market stress.</td></tr>
+            </tbody>
+          </table>
+
+          <div class="sub-label green">Security Token Risks</div>
+          <table class="risk-table">
+            <thead><tr><th>Risk</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>Regulatory risk</td><td>Security tokens may fall under financial regulations. Offering, holding, or trading them without proper authorisation may constitute a breach of law in certain jurisdictions.</td></tr>
+              <tr><td>Issuer risk</td><td>The value of a security token is tied to a specific company, project, or asset. If the issuer underperforms or fails, the token's value may fall to zero.</td></tr>
+              <tr><td>Liquidity risk</td><td>Security tokens often trade on a limited number of platforms, making it difficult to sell your tokens when you want to.</td></tr>
+              <tr><td>Legal complexity</td><td>Rights attached to security tokens may be hard to enforce, particularly across different jurisdictions.</td></tr>
+              <tr><td>Custody and transferability risk</td><td>Security tokens may require specific custody solutions and may not be supported across all wallets or exchanges.</td></tr>
+            </tbody>
+          </table>
+
+          <div class="sub-label green">Governance &amp; Utility Token Risks</div>
+          <table class="risk-table">
+            <thead><tr><th>Risk</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>Project dependency</td><td>These tokens are closely tied to the ongoing development and success of a specific platform or protocol. If the project fails, the token may become worthless.</td></tr>
+              <tr><td>Governance concentration</td><td>Voting rights may be concentrated among a small number of holders, reducing the effectiveness of decentralised governance.</td></tr>
+              <tr><td>Volatility risk</td><td>Even if designed for use within a platform, these tokens can experience significant price swings driven by speculation and market sentiment.</td></tr>
+              <tr><td>Functionality risk</td><td>If the platform or protocol changes its structure, the utility of the token may diminish significantly.</td></tr>
+              <tr><td>Regulatory uncertainty</td><td>The regulatory treatment of governance and utility tokens is still evolving, which may affect their legality or value in certain jurisdictions.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 6 -->
+    <div class="section-block" id="sec6">
+      <div class="section-header" onclick="toggleSection('sec6')">
+        <div class="section-number">6</div>
+        <div class="section-title-group">
+          <div class="section-title">Service / Product-Specific Risks</div>
+          <div class="section-ref">COBS 4.2.1R / COBS 4.12A</div>
+        </div>
+        <div class="section-toggle">&#9662;</div>
+      </div>
+      <div class="section-content">
+        <div class="section-body">
+          <p>Where your app promotes specific products or services, you must include risk disclosures tailored to that feature. A general risk warning about cryptoassets is not sufficient where specific services are being highlighted. The risks below must appear alongside the relevant product screen — not only in the terms and conditions or a linked page.</p>
+
+          <div class="sub-label green">Staking</div>
+          <table class="risk-table">
+            <thead><tr><th>Risk</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>Price volatility while staked</td><td>The value of your staked assets can fall significantly during the staking period.</td></tr>
+              <tr><td>Inability to sell during unstaking</td><td>You may not be able to access or sell your assets until the unstaking process is complete.</td></tr>
+              <tr><td>Length of unstaking period</td><td>Explain the specific unstaking or lock-up period applicable to your product, including the process and timeline for accessing funds after unstaking. Confirm whether any user action is required at the end of the lock-up period.</td></tr>
+              <tr><td>Loss risk</td><td>Rewards are not guaranteed and you may receive less than expected, or lose part of your staked capital.</td></tr>
+            </tbody>
+          </table>
+
+          <div class="sub-label green">Crypto Lending</div>
+          <table class="risk-table">
+            <thead><tr><th>Risk</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>Counterparty risk</td><td>The borrower or platform may default, resulting in partial or total loss of the lent assets.</td></tr>
+              <tr><td>Liquidity risk</td><td>You may not be able to access your funds during the lending period.</td></tr>
+              <tr><td>Smart contract risk</td><td>Where lending is facilitated by a smart contract, bugs or exploits could result in loss of funds.</td></tr>
+              <tr><td>Rate variability</td><td>Interest rates on crypto lending are variable and may change significantly over time.</td></tr>
+              <tr><td>Collateral risk</td><td>If collateral provided by the borrower falls in value, your lent assets may not be fully recoverable.</td></tr>
+            </tbody>
+          </table>
+
+          <div class="sub-label green">Crypto Borrowing</div>
+          <table class="risk-table">
+            <thead><tr><th>Risk</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>Liquidation risk</td><td>If the value of your collateral falls below a required threshold, your position may be automatically liquidated, resulting in loss of your collateral.</td></tr>
+              <tr><td>Interest rate risk</td><td>Borrowing rates may fluctuate. Rising rates can significantly increase the cost of your loan.</td></tr>
+              <tr><td>Collateral volatility</td><td>The collateral you provide is typically a cryptoasset and may fall in value, increasing the risk of liquidation.</td></tr>
+              <tr><td>Repayment risk</td><td>Failure to repay your loan or maintain the required collateral level may result in the loss of your deposited assets.</td></tr>
+              <tr><td>Platform risk</td><td>The platform facilitating the loan may experience technical issues, insolvency, or regulatory action.</td></tr>
+            </tbody>
+          </table>
+
+          <div class="sub-label green">OTC Trading Services</div>
+          <table class="risk-table">
+            <thead><tr><th>Risk</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>Counterparty risk</td><td>OTC trades are executed directly with a counterparty. If the counterparty defaults or acts fraudulently, you may lose your funds.</td></tr>
+              <tr><td>Price risk</td><td>OTC prices may differ from market prices. There is no guarantee that the rate quoted will be favourable or competitive at the time of execution.</td></tr>
+              <tr><td>Liquidity risk</td><td>OTC desks rely on their own liquidity sources. During periods of market stress, liquidity may be limited and trade execution may be delayed or unavailable.</td></tr>
+              <tr><td>Settlement risk</td><td>There is a risk that a trade is not settled as agreed, particularly in cross-border or cross-currency transactions.</td></tr>
+              <tr><td>Regulatory risk</td><td>OTC services may be subject to regulatory requirements in multiple jurisdictions. Ensure you understand the regulatory context in which your OTC provider operates.</td></tr>
+            </tbody>
+          </table>
+
+          <div class="sub-label green">APY / Yield Figures</div>
+          <ul>
+            <li>State clearly that rates are subject to change and are not guaranteed</li>
+            <li>Explain how the APY or yield is calculated and what assumptions it is based on</li>
+            <li>Include a source and effective date for any rate quoted</li>
+            <li>Where rates are promotional or introductory, clearly state the duration and end conditions</li>
+            <li>Include a disclaimer that past rates are not indicative of future returns</li>
+            <li>Where an asterisk is used to flag a footnote, the associated explanation must be visible on the same screen — not only in the terms and conditions</li>
+          </ul>
+
+          <div class="sub-label green">Past Performance Charts</div>
+          <ul>
+            <li>Include a prominent disclaimer that past performance is not a reliable indicator of future results</li>
+            <li>Charts must default to showing the "All Time" or "MAX" view — do not pre-select a view that emphasises short-term positive performance</li>
+            <li>Include the source of the data displayed</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 7 -->
+    <div class="section-block" id="sec7">
+      <div class="section-header" onclick="toggleSection('sec7')">
+        <div class="section-number">7</div>
+        <div class="section-title-group">
+          <div class="section-title">Sensitive Words &amp; Misleading Claims</div>
+          <div class="section-ref">COBS 4.2.1R / COBS 4.2.5G</div>
+        </div>
+        <div class="section-toggle">&#9662;</div>
+      </div>
+      <div class="section-content">
+        <div class="section-body">
+          <p>App copy is often written with conversion and engagement in mind — short, punchy, benefit-led. This creates a high frequency of compliance issues in practice. The following phrases appear repeatedly in app review feedback and should be addressed before submission.</p>
+          <table class="phrase-table">
+            <thead><tr><th>Problematic Phrase</th><th>Why It Is Flagged</th><th>Suggested Approach</th></tr></thead>
+            <tbody>
+              <tr><td class="bad-cell">✗ "Buy crypto in seconds" / "instantly" / "in a flash"</td><td>Implies speed and simplicity in a way that minimises the consideration and risk involved in purchasing high-risk investments.</td><td class="good-cell">✓ Remove time-implying language. Replace with neutral descriptions: "Browse available assets" or "Build your crypto portfolio".</td></tr>
+              <tr><td class="bad-cell">✗ "Earn effortlessly" / "Watch rewards roll in automatically"</td><td>Implies passive, risk-free profits. "Effortlessly" downplays the risk and complexity of yield products. "Automatically" implies certainty of return.</td><td class="good-cell">✓ "View rewards earned from eligible assets — returns may vary and are not guaranteed."</td></tr>
+              <tr><td class="bad-cell">✗ "Safe" / "Securely" / "Secure your crypto"</td><td>Sensitive words under COBS 4.2.5G. Imply capital protection that does not exist. Cryptoassets are not covered by the FSCS.</td><td class="good-cell">✓ Remove or replace with factual descriptions of specific security measures: "We use multi-factor authentication and cold storage. Cryptoassets are not covered by the FSCS."</td></tr>
+              <tr><td class="bad-cell">✗ "Simple" / "Easy" / "Hassle-free"</td><td>Downplays the complexity and risk of cryptoasset investing.</td><td class="good-cell">✓ Remove. Focus on what is well-structured or efficient, with appropriate qualification.</td></tr>
+              <tr><td class="bad-cell">✗ "Enjoy full protection"</td><td>Directly implies FSCS or regulatory protection, which does not apply to cryptoassets for UK users.</td><td class="good-cell">✓ Remove. If referring to specific technical safeguards, describe them specifically and include a clear FSCS disclaimer.</td></tr>
+              <tr><td class="bad-cell">✗ Unqualified award claims</td><td>Award claims require substantiation under COBS 4.2.1R. Vague references without specificity are high risk.</td><td class="good-cell">✓ Include the full award name, awarding body, and year.</td></tr>
+              <tr><td class="bad-cell">✗ "Up to X% yearly" without qualification</td><td>Where staking periods are shorter than a year, annualised rate language may not reflect what users actually receive. "Up to" without context is vague and potentially misleading.</td><td class="good-cell">✓ "You may receive staking rewards of up to the equivalent of X% per year, shown as an annualised rate. Rewards are variable, dynamic, and not guaranteed. Your capital remains at risk."</td></tr>
+            </tbody>
+          </table>
+          <div class="callout tip">
+            <div class="callout-label">The "Show, Don't Tell" Principle</div>
+            Rather than labelling your product as "secure", "trusted", or "protected", describe specifically what processes, safeguards, or standards you apply. This approach is both more credible and more compliant. Let users draw their own conclusions from the facts you provide.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 8 -->
+    <div class="section-block" id="sec8">
+      <div class="section-header" onclick="toggleSection('sec8')">
+        <div class="section-number">8</div>
+        <div class="section-title-group">
+          <div class="section-title">Referral Programmes &amp; Incentives</div>
+          <div class="section-ref">COBS 4.12A.7R</div>
+        </div>
+        <div class="section-toggle">&#9662;</div>
+      </div>
+      <div class="section-content">
+        <div class="section-body">
+          <p>Under COBS 4.12A.7R, firms are prohibited from offering monetary or non-monetary incentives to UK users as an inducement to engage with, sign up to, or invest in a qualifying cryptoasset. This is an absolute restriction — it applies regardless of how the incentive is structured or framed.</p>
+          <div class="sub-label green">Prohibited Incentives</div>
+          <ul>
+            <li><strong>Refer-a-friend reward schemes</strong> — offering cash, tokens, or any reward to a user for introducing a new investor. Even where the reward is modest, this is prohibited where it is tied to the referred user engaging with or investing in a cryptoasset product. This prohibition applies whether the reward goes to the referrer, the referred user, or both</li>
+            <li><strong>Sign-up bonuses</strong> — offering a financial reward in exchange for registering or completing onboarding</li>
+            <li><strong>Rewards tied to trading volume</strong> — for example, offering cashback, bonus tokens, or enhanced rates contingent on a user reaching a trading threshold or activity level</li>
+            <li><strong>Limited-time offers</strong> — time-limited promotions designed to encourage investment within a specific window, as these create artificial urgency that induces investment activity</li>
+            <li><strong>Tiered loyalty rewards</strong> — where reaching a higher membership or account tier unlocks investment-related rewards, thereby incentivising users to invest more to qualify</li>
+          </ul>
+          <div class="sub-label green">Referral Codes</div>
+          <p>Where an app includes a referral code field during sign-up, the use of referral codes to identify users arriving via partner or affiliate channels is generally permissible on its own. However, if the referral code is linked to any form of benefit, reward, or preferential rate for either the referrer or the referred user, this will constitute a prohibited incentive under COBS 4.12A.7R.</p>
+          <p>Before including a referral code field in your submission, confirm what specific benefit (if any) is associated with the code and provide this detail in your submission. Zeyro cannot approve a referral mechanism without understanding what reward it triggers.</p>
+          <div class="sub-label green">Engagement Tokens and Non-Cash Rewards</div>
+          <p>Where a firm issues non-tradable, non-transferable engagement tokens awarded purely for engagement (not linked to investment activity), these may fall outside the prohibition. However, if such tokens are visible on the same screen as tradable cryptoassets, care must be taken to ensure the screen as a whole is not misleading. Confirm the nature of these tokens clearly in your submission.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 9 -->
+    <div class="section-block" id="sec9">
+      <div class="section-header" onclick="toggleSection('sec9')">
+        <div class="section-number">9</div>
+        <div class="section-title-group">
+          <div class="section-title">Customer Journey Accuracy</div>
+          <div class="section-ref">COBS 4.2.1R</div>
+        </div>
+        <div class="section-toggle">&#9662;</div>
+      </div>
+      <div class="section-content">
+        <div class="section-body">
+          <div class="sub-label green">Representing the Onboarding Journey Accurately</div>
+          <p>Your app must accurately represent the journey a UK user will go through before they can access trading functionality. Language that implies immediate or near-instant access to trading is misleading because UK users must complete several mandatory steps before they can trade. Where post-onboarding screens include copy referencing immediate trading, this must also be reviewed and amended.</p>
+          <div class="sub-label green">Substantiating Claims</div>
+          <p>Any claim made about your product or service within the app must be capable of being evidenced. This includes comparative claims (e.g. "faster", "lower fees"), superlative claims (e.g. "the most cost-effective"), and outcome-based claims (e.g. "save money", "grow your assets").</p>
+          <ul>
+            <li>If you cannot evidence a claim, remove or rephrase it</li>
+            <li>Comparative claims must specify what they are being compared to and include supporting evidence</li>
+            <li>Superlative claims ("best", "most", "leading") are high risk — they will almost always require substantiation or removal</li>
+            <li>Outcome-based claims imply certainty and must be qualified with appropriate risk language</li>
+          </ul>
+          <div class="sub-label green">Regulatory Framing</div>
+          <p>Many firms are regulated or licensed in other jurisdictions. References to this regulatory status within the app can create a false impression that UK regulatory protections apply. Any reference to your regulatory status must be accompanied by a clear clarification that this does not provide UK protections, and this clarification must appear with equal prominence to the original claim.</p>
+          <div class="callout rule">
+            <div class="callout-label">Recommended Clarification</div>
+            "We are not a UK-authorised firm, so UK users cannot refer complaints to the Financial Ombudsman Service (FOS), and investments are not covered by the Financial Services Compensation Scheme (FSCS)."
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 10 -->
+    <div class="section-block" id="sec10">
+      <div class="section-header" onclick="toggleSection('sec10')">
+        <div class="section-number">10</div>
+        <div class="section-title-group">
+          <div class="section-title">The Back-End Frictions Flow</div>
+          <div class="section-ref">COBS 4.12A.18R–4.12A.27G / COBS 10A</div>
+        </div>
+        <div class="section-toggle">&#9662;</div>
+      </div>
+      <div class="section-content">
+        <div class="section-body">
+          <p>For most app submissions, a significant proportion of the review feedback relates to the back-end frictions flow — the mandatory sequence of safeguards that UK users must complete before they can access trading functionality. This includes:</p>
+          <ul>
+            <li><strong>The Personalised Risk Warning</strong> — delivered using the user's full name, presented with equal-prominence Leave/Continue options</li>
+            <li><strong>Client Categorisation</strong> — self-categorisation as a High Net-Worth Investor or Restricted Investor using the verbatim FCA annex statements</li>
+            <li><strong>Appropriateness Assessment</strong> — a minimum of 10 questions per set, covering all topics in COBS 10 Annex 4G, with a recommended 80% pass rate and increasing lockout periods after failed attempts</li>
+            <li><strong>24-Hour Cooling-Off Period</strong> — with a visible countdown and an equally prominent Leave/Continue screen presented when the period concludes</li>
+          </ul>
+          <div class="callout tip">
+            <div class="callout-label">&#8599; Cross-Reference</div>
+            Full guidance on the back-end frictions flow is covered in detail on the <strong style="color:var(--text-white)">Onboarding Frictions page</strong> of this hub, including FCA references, practical implementation guidance, example assessment questions, good and poor practice tables, and an interactive compliance checklist. Review that page before submitting your app flow.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHECKLIST -->
+    <div class="section-block open" id="sec-checklist">
+      <div class="section-header" onclick="toggleSection('sec-checklist')">
+        <div class="section-number" style="font-size:22px;">&#9745;</div>
+        <div class="section-title-group">
+          <div class="section-title">Pre-Submission Checklist</div>
+          <div class="section-ref">Interactive — Track Your Compliance</div>
+        </div>
+        <div class="section-toggle">&#9662;</div>
+      </div>
+      <div class="section-content">
+        <div class="section-body">
+          <p>Use this checklist before submitting your app screens for review. Addressing these points internally will reduce feedback rounds and speed up approval.</p>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="progressBar" style="width:0%"></div>
+          </div>
+          <div class="progress-text" id="progressText">0 of 20 items checked</div>
+
+          <div class="checklist-section">
+            <div class="checklist-category">Risk Warning Banner</div>
+            <div class="checklist-item" id="ci1"><div class="checklist-box" onclick="toggleCheck('ci1')"></div><span>The prescribed FCA risk warning is included on every screen that constitutes a financial promotion (exact wording, not paraphrased)</span></div>
+            <div class="checklist-item" id="ci2"><div class="checklist-box" onclick="toggleCheck('ci2')"></div><span>The risk warning banner is fixed at the top of the screen and does not scroll off</span></div>
+            <div class="checklist-item" id="ci3"><div class="checklist-box" onclick="toggleCheck('ci3')"></div><span>The risk warning text is clearly legible — sufficient font size and contrast with the surrounding UI</span></div>
+            <div class="checklist-item" id="ci4"><div class="checklist-box" onclick="toggleCheck('ci4')"></div><span>The risk warning is not dismissible (no close or X button)</span></div>
+            <div class="checklist-item" id="ci5"><div class="checklist-box" onclick="toggleCheck('ci5')"></div><span>A clickable "Take 2 mins to learn more" link is included within the banner, directing to a compliant risk summary page</span></div>
+            <div class="checklist-item" id="ci6"><div class="checklist-box" onclick="toggleCheck('ci6')"></div><span>The risk summary page follows the structure prescribed in COBS 4 Annex 1R</span></div>
+
+            <div class="checklist-category">Approval Time Stamp</div>
+            <div class="checklist-item" id="ci7"><div class="checklist-box" onclick="toggleCheck('ci7')"></div><span>The approval time stamp is present on every screen that carries the risk warning banner (exact wording with Zeyro LTD FRN 1001386)</span></div>
+            <div class="checklist-item" id="ci8"><div class="checklist-box" onclick="toggleCheck('ci8')"></div><span>The approval stamp refers to "financial promotions" — not "offers", "content", or other terms</span></div>
+
+            <div class="checklist-category">Balancing Language</div>
+            <div class="checklist-item" id="ci9"><div class="checklist-box" onclick="toggleCheck('ci9')"></div><span>Risk disclosures accompany every benefit claim, at equal prominence, throughout the app</span></div>
+            <div class="checklist-item" id="ci10"><div class="checklist-box" onclick="toggleCheck('ci10')"></div><span>Asset listing pages include a token description and asset-specific risk disclosures, fully visible on the page (not hidden behind expand links or linked pages)</span></div>
+            <div class="checklist-item" id="ci11"><div class="checklist-box" onclick="toggleCheck('ci11')"></div><span>Past performance charts default to the "All Time" / "MAX" view and include a past performance disclaimer and data source</span></div>
+            <div class="checklist-item" id="ci12"><div class="checklist-box" onclick="toggleCheck('ci12')"></div><span>APY / yield figures include a disclaimer that rates are variable, subject to change, and not guaranteed — visible on the same screen as the figure</span></div>
+            <div class="checklist-item" id="ci13"><div class="checklist-box" onclick="toggleCheck('ci13')"></div><span>Fee disclosures are clearly visible before the user confirms a transaction</span></div>
+            <div class="checklist-item" id="ci14"><div class="checklist-box" onclick="toggleCheck('ci14')"></div><span>Staking and earn screens explain the lock-up period, unstaking process, and timeline for accessing funds</span></div>
+            <div class="checklist-item" id="ci15"><div class="checklist-box" onclick="toggleCheck('ci15')"></div><span>Service-specific risks (staking, lending, borrowing, OTC) are included on every screen where those products are promoted</span></div>
+
+            <div class="checklist-category">Fair, Clear and Not Misleading</div>
+            <div class="checklist-item" id="ci16"><div class="checklist-box" onclick="toggleCheck('ci16')"></div><span>No use of "secure", "guaranteed", or "protected" without specific substantiation</span></div>
+            <div class="checklist-item" id="ci17"><div class="checklist-box" onclick="toggleCheck('ci17')"></div><span>No use of "easy", "simple", or "hassle-free" to describe crypto services</span></div>
+            <div class="checklist-item" id="ci18"><div class="checklist-box" onclick="toggleCheck('ci18')"></div><span>No unsubstantiated comparative or superlative claims (e.g. "best", "fastest", "lowest fees")</span></div>
+            <div class="checklist-item" id="ci19"><div class="checklist-box" onclick="toggleCheck('ci19')"></div><span>Any reference to regulatory status includes a UK-specific disclaimer (no FSCS / FOS protection)</span></div>
+            <div class="checklist-item" id="ci20"><div class="checklist-box" onclick="toggleCheck('ci20')"></div><span>No claim that promotions are "FCA-approved" — they are approved by Zeyro as your s21 approver</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script>
+  const TOTAL = 20;
+  let checked = 0;
+
+  function toggleSection(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle('open');
+  }
+
+  function toggleNav(header) {
+    header.classList.toggle('expanded');
+    const items = header.nextElementSibling;
+    if (items && items.classList.contains('nav-items')) {
+      items.classList.toggle('open');
+    }
+  }
+
+  function toggleCheck(id) {
+    const item = document.getElementById(id);
+    const box = item.querySelector('.checklist-box');
+    const isChecked = box.classList.toggle('checked');
+    item.classList.toggle('checked-item', isChecked);
+    checked += isChecked ? 1 : -1;
+    document.getElementById('progressBar').style.width = (checked / TOTAL * 100) + '%';
+    document.getElementById('progressText').textContent = checked + ' of ' + TOTAL + ' items checked';
+  }
+
+  function toggleTheme() {
+    document.body.classList.toggle('light');
+    const isLight = document.body.classList.contains('light');
+    document.getElementById('themeIcon').innerHTML = isLight ? '&#9790;' : '&#9788;';
+    document.getElementById('themeLabel').textContent = isLight ? 'Dark Mode' : 'Light Mode';
+  }
+</script>
+</body>
+</html>
