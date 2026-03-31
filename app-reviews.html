@@ -253,7 +253,7 @@
         <div class="nav-item" onclick="window.location.href='index.html'">Web Reviews <span class="nav-badge live">Live</span></div>
         <div class="nav-item" onclick="window.location.href='index.html'">App Store Reviews <span class="nav-badge live">Live</span></div>
         <div class="nav-item active">App Reviews <span class="nav-badge live">Live</span></div>
-        <div class="nav-item" onclick="window.location.href='index.html'">Social Media Reviews <span class="nav-badge soon">Soon</span></div>
+        <div class="nav-item">Social Media Reviews <span class="nav-badge soon">Soon</span></div>
         <div class="nav-item" onclick="window.location.href='index.html'">Onboarding Frictions <span class="nav-badge live">Live</span></div>
       </div>
     </div>
@@ -856,7 +856,18 @@
     const isLight = document.body.classList.contains('light');
     document.getElementById('themeIcon').innerHTML = isLight ? '&#9790;' : '&#9788;';
     document.getElementById('themeLabel').textContent = isLight ? 'Dark Mode' : 'Light Mode';
+    localStorage.setItem('zeyro-theme', isLight ? 'light' : 'dark');
   }
+
+  // Restore saved theme preference
+  (function() {
+    const saved = localStorage.getItem('zeyro-theme');
+    if (saved === 'light') {
+      document.body.classList.add('light');
+      document.getElementById('themeIcon').innerHTML = '&#9790;';
+      document.getElementById('themeLabel').textContent = 'Dark Mode';
+    }
+  })();
 </script>
 </body>
 </html>
