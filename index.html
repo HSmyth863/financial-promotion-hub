@@ -946,7 +946,7 @@
       </div>
       <div class="nav-items">
         <div class="nav-item" data-page="funds-factsheets" onclick="showPage('funds-factsheets', this)">
-          Fact Sheets <span class="nav-badge soon">Soon</span>
+          Fact Sheets <span class="nav-badge live">Live</span>
         </div>
         <div class="nav-item" data-page="funds-prospectus" onclick="showPage('funds-prospectus', this)">
           Prospectus / Supplements <span class="nav-badge soon">Soon</span>
@@ -1023,7 +1023,7 @@
             Fact sheets, prospectus supplements, presentations, and quarterly commentary compliance guides.
           </div>
           <div class="card-items">
-            <span class="card-item-tag">Fact Sheets</span>
+            <span class="card-item-tag active">Fact Sheets &#10003;</span>
             <span class="card-item-tag">Prospectus</span>
             <span class="card-item-tag">Presentations</span>
             <span class="card-item-tag">Quarterly Commentary</span>
@@ -2286,12 +2286,540 @@
     </div>
 
     <div class="page" id="page-funds-factsheets">
-      <div class="page-header"><div class="page-label">Fund Promotions</div><div class="page-title">Fact Sheets</div></div>
-      <div class="placeholder-content">
-        <div class="placeholder-icon">&#128196;</div>
-        <div class="placeholder-title">Coming Soon</div>
-        <div class="placeholder-desc">Fund fact sheet compliance guidance and review frameworks will be available here.</div>
+      <div class="page-header fade-in">
+        <div class="page-label">Fund Promotions</div>
+        <div class="page-title">Fact Sheets</div>
+        <p class="page-intro">
+          Preparing UK-compliant Fact Sheets for OFR-recognised funds approved under s21 FSMA. This document supports clients preparing Fact Sheets for UK retail distribution under the Overseas Funds Regime (OFR), where Zeyro Ltd acts as the s21 FSMA financial promotions approver. It sets out the key disclosures, warnings, and presentation standards required under the FCA Handbook (primarily COBS 4), alongside practical guidance drawn from our review experience on common issues and how to address them.
+        </p>
       </div>
+
+      <div class="key-points fade-in">
+        <div class="key-point"><span class="kp-icon">&#11045;</span> Applies to OFR-recognised funds marketed to UK retail investors</div>
+        <div class="key-point"><span class="kp-icon">&#11045;</span> Grounded in COBS 4 &mdash; particularly COBS 4.2, 4.5, 4.6, 4.10 and 4.15</div>
+        <div class="key-point"><span class="kp-icon">&#11045;</span> Each document must stand alone as a compliant promotion</div>
+      </div>
+
+      <div class="callout rule" style="margin-bottom:36px;">
+        <div class="callout-label">This Guide Covers Twelve Core Areas</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:10px;">
+          <div>
+            <ul style="list-style:none; padding:0; margin:0;">
+              <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; <strong style="color:var(--text-white);">1.</strong> Identifiable as a Financial Promotion</li>
+              <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; <strong style="color:var(--text-white);">2.</strong> UK Investor Information</li>
+              <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; <strong style="color:var(--text-white);">3.</strong> General Disclaimers</li>
+              <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; <strong style="color:var(--text-white);">4.</strong> Suitability Statement</li>
+              <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; <strong style="color:var(--text-white);">5.</strong> Risks</li>
+              <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; <strong style="color:var(--text-white);">6.</strong> Past Performance</li>
+            </ul>
+          </div>
+          <div>
+            <ul style="list-style:none; padding:0; margin:0;">
+              <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; <strong style="color:var(--text-white);">7.</strong> Benchmark Disclosures</li>
+              <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; <strong style="color:var(--text-white);">8.</strong> Fee Information</li>
+              <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; <strong style="color:var(--text-white);">9.</strong> SFDR Disclosures</li>
+              <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; <strong style="color:var(--text-white);">10.</strong> Approval Time Stamp</li>
+              <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; <strong style="color:var(--text-white);">11.</strong> Prominence</li>
+              <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; <strong style="color:var(--text-white);">12.</strong> Quick-Reference Checklist</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 1: Identifiable as a Financial Promotion -->
+      <div class="section-block open" id="fs-sec1">
+        <div class="section-header" onclick="toggleSection('fs-sec1')">
+          <div class="section-number">1</div>
+          <div class="section-title-group">
+            <div class="section-title">Identifiable as a Financial Promotion</div>
+            <div class="section-ref">COBS 4.3.1R</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>The Fact Sheet must be clearly identifiable as a financial promotion. This may include a &lsquo;This is a marketing communication&rsquo; statement on each page of the document.</p>
+
+            <div class="callout rule">
+              <div class="callout-label">Suggested Wording</div>
+              &ldquo;This is a marketing communication.&rdquo;
+            </div>
+
+            <div class="callout tip">
+              <div class="callout-label">Placement Tip</div>
+              Include the statement on every page &mdash; typically at the top or in the header &mdash; so that each page of the Fact Sheet is individually identifiable as a promotion.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 2: UK Investor Information -->
+      <div class="section-block" id="fs-sec2">
+        <div class="section-header" onclick="toggleSection('fs-sec2')">
+          <div class="section-number">2</div>
+          <div class="section-title-group">
+            <div class="section-title">UK Investor Information</div>
+            <div class="section-ref">COBS 4.15.2R &amp; 4.15.3R</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>The following details must be made clear to UK investors. This can be included in a dedicated &lsquo;UK Investor&rsquo; section or integrated throughout the document, provided all disclosures are in text size relative to that used across the promotion to meet the &lsquo;prominence&rsquo; standards (see Section 11).</p>
+
+            <div class="sub-label green">2.1 Overseas Scheme Disclosure (COBS 4.15.2R(1))</div>
+            <p>It must be made clear that the scheme is authorised overseas (e.g. domiciled in Luxembourg or Ireland) but is able to market in the UK under the OFR and is not FCA-authorised.</p>
+
+            <div class="callout example">
+              <div class="callout-label">Example Wording</div>
+              &ldquo;Example SICAV is authorised and regulated in [Luxembourg by the Commission de Surveillance du Secteur Financier (CSSF)] [Ireland by the Central Bank of Ireland]. It is a recognised collective investment scheme under section 264 of the Financial Services and Markets Act 2000 but is not authorised or otherwise regulated by the Financial Conduct Authority.&rdquo;
+            </div>
+
+            <div class="sub-label green">2.2 FOS / FSCS Disclosures (COBS 4.15.2R(2) &amp; 4.15.3R)</div>
+            <p>It must be disclosed to investors that they will not be able to refer complaints against the Manager or depositary to the Financial Ombudsman Service, and that they will not be covered for reimbursement under the FSCS.</p>
+
+            <div class="callout example">
+              <div class="callout-label">Example Wording</div>
+              &ldquo;Example SICAV, its operator and depositary are authorised and regulated in [Luxembourg/Ireland/example]. As such, it is unlikely that the Financial Ombudsman Service will be able to consider complaints about them. Additionally, investors may not be able to claim under the Financial Services Compensation Scheme in the event of their default.&rdquo;
+            </div>
+
+            <div class="callout tip">
+              <div class="callout-label">Practical Guidance</div>
+              Where space on page 1 is tight, a dedicated &lsquo;UK Investor&rsquo; section on page 2 is an effective way to present these disclosures legibly without compressing the performance information on page 1.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 3: General Disclaimers -->
+      <div class="section-block" id="fs-sec3">
+        <div class="section-header" onclick="toggleSection('fs-sec3')">
+          <div class="section-number">3</div>
+          <div class="section-title-group">
+            <div class="section-title">General Disclaimers</div>
+            <div class="section-ref">COBS 4.15.2R(4)</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <div class="sub-label green">3.1 Recommendation to Seek Financial Advice</div>
+            <p>There must be a clear recommendation that the investor should seek financial advice before making any investment decisions.</p>
+
+            <div class="callout rule">
+              <div class="callout-label">Suggested Wording</div>
+              &ldquo;Prospective investors should consult their financial adviser before making an investment decision.&rdquo;
+            </div>
+
+            <div class="sub-label green">3.2 References to Other Fund Documents</div>
+            <p>Clear references to review the Prospectus, Sub-Fund Supplement and KIID for more information should be made, including where these can be accessed (e.g. the website and language availability).</p>
+
+            <div class="callout tip">
+              <div class="callout-label">Compliance Tip</div>
+              Specify the exact URL or webpage where investors can access the full suite of documents, and confirm the languages in which they are available.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 4: Suitability Statement -->
+      <div class="section-block" id="fs-sec4">
+        <div class="section-header" onclick="toggleSection('fs-sec4')">
+          <div class="section-number">4</div>
+          <div class="section-title-group">
+            <div class="section-title">Suitability Statement</div>
+            <div class="section-ref">Investor Profile &amp; Risk Horizon</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>This is similar to the Profile of a Typical Investor found in the Prospectus. It must address the investment time horizon and risk level in plain, accessible language. Vague language such as &ldquo;long term&rdquo; is not sufficient on its own &mdash; if this means 5+ years, this should be stated explicitly. The Suitability Statement will ideally sit beneath the fund&rsquo;s objectives section.</p>
+
+            <div class="callout example">
+              <div class="callout-label">Example Wording</div>
+              &ldquo;This Sub-Fund may be appropriate for investors who seek capital appreciation over the long term, typically meaning an investment horizon of 7 years or more. Although history has shown that shares have the potential to give better long-term returns than money market securities or bonds, they have also proved to be more volatile.&rdquo;
+            </div>
+
+            <table class="comparison-table">
+              <thead><tr><th class="good">&#10003; Clear &amp; Specific</th><th class="bad">&#10007; Vague &amp; Non-Compliant</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><span class="check">&#10003;</span> &ldquo;Suitable for investors with an investment horizon of 7 years or more who can tolerate material short-term volatility.&rdquo;</td>
+                  <td><span class="cross">&#10007;</span> &ldquo;Suitable for long-term investors.&rdquo; (no horizon specified, no indication of risk tolerance)</td>
+                </tr>
+                <tr>
+                  <td><span class="check">&#10003;</span> Places the Suitability Statement directly beneath the fund objectives.</td>
+                  <td><span class="cross">&#10007;</span> Hides the statement in a small-print disclaimer at the end of the document.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 5: Risks -->
+      <div class="section-block" id="fs-sec5">
+        <div class="section-header" onclick="toggleSection('fs-sec5')">
+          <div class="section-number">5</div>
+          <div class="section-title-group">
+            <div class="section-title">Risks</div>
+            <div class="section-ref">COBS 4.2.1R</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <div class="sub-label green">5.1 Capital Loss Warning</div>
+            <p>A clear warning that there is a potential for loss of capital must be included. This should be visually prominent and not confined to a small-print disclaimer section.</p>
+
+            <div class="sub-label green">5.2 Fund-Specific Risks</div>
+            <p>If the fund invests primarily in derivatives, uses leverage, or is particularly high-risk in nature (e.g. small-cap or emerging markets exposure), clear risks pertaining to the specific characteristics of the fund should be outlined.</p>
+
+            <div class="sub-label green">5.3 Equal Prominence to Benefits</div>
+            <p>Risk disclosures must be given equal prominence to any benefits or performance information &mdash; returns should not be emphasised at the expense of risk.</p>
+
+            <div class="callout warning">
+              <div class="callout-label">Common Issues to Avoid</div>
+              <ul style="list-style:none; padding:0; margin:0;">
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#10007; Burying the capital-loss warning in a grey footnote while performance figures are emphasised in large type.</li>
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#10007; Generic risk language where the fund has specific, elevated risk characteristics (leverage, concentration, derivatives, emerging markets).</li>
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#10007; Placing all risks in a single disclaimer block at the end rather than adjacent to the content they relate to.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 6: Past Performance -->
+      <div class="section-block" id="fs-sec6">
+        <div class="section-header" onclick="toggleSection('fs-sec6')">
+          <div class="section-number">6</div>
+          <div class="section-title-group">
+            <div class="section-title">Past Performance Charts and Disclaimers</div>
+            <div class="section-ref">COBS 4.6.2R &amp; 4.6.4A</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <div class="sub-label green">6.1 Net of Fees &amp; Base Currency</div>
+            <p>Performance figures must be shown net of fees (with a disclosure identifying this clearly) and base currency must be made clear.</p>
+
+            <div class="sub-label green">6.2 Past Performance Disclaimer</div>
+            <p>A past performance disclaimer must appear directly beneath each performance chart or table &mdash; not only in a footnote at the bottom of the page.</p>
+
+            <div class="callout rule">
+              <div class="callout-label">Suggested Wording</div>
+              &ldquo;Past performance is not a reliable indicator of future results.&rdquo;
+            </div>
+
+            <div class="callout tip">
+              <div class="callout-label">Presentation</div>
+              The past performance warning should be <strong style="color:var(--text-white)">bold</strong> and positioned directly below the past performance table or chart.
+            </div>
+
+            <div class="sub-label green">6.3 Minimum Period of Performance Data</div>
+            <p>Past performance must be presented for at least the last 5 years (or full life of the fund if shorter), unless there is less than 12 months of performance data available (COBS 4.6.2R). Where a fund has changed its strategy or benchmark, the reason for any limited history should be explained clearly to avoid the appearance of missing data.</p>
+
+            <div class="sub-label green">6.4 FCA Prescribed Percentage Growth Table</div>
+            <p>There must be a percentage growth table covering at least five 12-month periods, or as many periods as performance data is available (where exceeding 12 months) (COBS 4.6.4A).</p>
+
+            <table class="comparison-table">
+              <thead><tr><th class="good">&#10003; Compliant Presentation</th><th class="bad">&#10007; Non-Compliant Presentation</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><span class="check">&#10003;</span> Bold disclaimer directly beneath the chart, base currency labelled, net of fees confirmed.</td>
+                  <td><span class="cross">&#10007;</span> Disclaimer relegated to a single footer line in grey text at the bottom of page 2.</td>
+                </tr>
+                <tr>
+                  <td><span class="check">&#10003;</span> Percentage growth table covering five discrete 12-month periods.</td>
+                  <td><span class="cross">&#10007;</span> Cumulative performance only, or selectively chosen time periods.</td>
+                </tr>
+                <tr>
+                  <td><span class="check">&#10003;</span> Brief explanation where less than 5 years of data is available (e.g. strategy change, fund launch).</td>
+                  <td><span class="cross">&#10007;</span> Gaps in the performance record without explanation.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 7: Benchmark Disclosures -->
+      <div class="section-block" id="fs-sec7">
+        <div class="section-header" onclick="toggleSection('fs-sec7')">
+          <div class="section-number">7</div>
+          <div class="section-title-group">
+            <div class="section-title">Benchmark Disclosures</div>
+            <div class="section-ref">COBS 4.5</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>Where a benchmark is used, it must be clearly identified along with a summary of how it is used (target, constraining, or comparator benchmark). Where the fund is actively managed, this should be made explicit alongside the purpose of the benchmark.</p>
+
+            <div class="callout example">
+              <div class="callout-label">Example Wording (using asterisks next to the benchmark name)</div>
+              &ldquo;* The Fund is actively managed and references a benchmark for asset allocation, risk measurement and comparative purposes.&rdquo;
+              <br><br>
+              &ldquo;** This factsheet also references an alternative benchmark in addition to the primary Fund&rsquo;s benchmark, which is considered a suitable comparison for performance purposes due to the Fund&rsquo;s investment strategy.&rdquo;
+            </div>
+
+            <div class="callout tip">
+              <div class="callout-label">Presentation</div>
+              Benchmark disclosures should sit directly beneath or adjacent to the benchmark reference &mdash; not only in a general disclaimer block at the end of the document.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 8: Fee Information -->
+      <div class="section-block" id="fs-sec8">
+        <div class="section-header" onclick="toggleSection('fs-sec8')">
+          <div class="section-number">8</div>
+          <div class="section-title-group">
+            <div class="section-title">Fee Information</div>
+            <div class="section-ref">Ongoing Charges &amp; Disclosure</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>The Ongoing Charges Figure (OCF) should be clearly presented within the main body of the Fact Sheet &mdash; for example, in the &lsquo;Basic Information / Fund Information&rsquo; table on the first page &mdash; rather than confined to a UK disclaimer section at the back.</p>
+
+            <div class="callout tip">
+              <div class="callout-label">Placement</div>
+              Include the OCF alongside other key fund data (share class, ISIN, base currency, launch date) where retail investors expect to find it. Any additional fees and charges should be disclosed with equivalent prominence.
+            </div>
+
+            <div class="callout warning">
+              <div class="callout-label">Common Pitfall</div>
+              OCF figures buried in a small-print UK disclosure on page 2 or page 3 &mdash; when the headline fund data table on page 1 omits them &mdash; do not meet the prominence standard.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 9: SFDR Disclosures -->
+      <div class="section-block" id="fs-sec9">
+        <div class="section-header" onclick="toggleSection('fs-sec9')">
+          <div class="section-number">9</div>
+          <div class="section-title-group">
+            <div class="section-title">SFDR Article 6, 8 and 9 Disclosures</div>
+            <div class="section-ref">Sustainability Classification</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>For funds that are classified as Article 6, Article 8 or Article 9 under SFDR, this classification must be clearly identified within the Fact Sheet. Where detailed information on this classification is not included in the Fact Sheet itself, there must be a clear and prominent re-direction to the Sub-Fund Supplement or Prospectus where this is covered.</p>
+
+            <div class="callout rule">
+              <div class="callout-label">What To Include</div>
+              <ul style="list-style:none; padding:0; margin:0;">
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; The SFDR classification (Article 6, 8, or 9).</li>
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; A concise summary of what that classification means in practice for this fund.</li>
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#8250; A clear signpost to the Sub-Fund Supplement or Prospectus for the full disclosure.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 10: Approval Time Stamp -->
+      <div class="section-block" id="fs-sec10">
+        <div class="section-header" onclick="toggleSection('fs-sec10')">
+          <div class="section-number">10</div>
+          <div class="section-title-group">
+            <div class="section-title">Approval Time Stamp</div>
+            <div class="section-ref">COBS 4.10.7A</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>As the Fact Sheet is approved by a section 21 financial promotions approver, it must include the approval time stamp prominently.</p>
+
+            <div class="callout rule">
+              <div class="callout-label">Suggested Wording</div>
+              &ldquo;This financial promotion has been approved by Zeyro Ltd (FRN 1001386) on [Date].&rdquo;
+            </div>
+
+            <div class="callout tip">
+              <div class="callout-label">Placement</div>
+              The approval time stamp should be clearly legible &mdash; typically placed in the UK Investor section, footer, or end-of-document disclosure block, at a font size comparable to the rest of the document. Replace [Date] with the actual approval date; do not leave a placeholder.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 11: Prominence -->
+      <div class="section-block" id="fs-sec11">
+        <div class="section-header" onclick="toggleSection('fs-sec11')">
+          <div class="section-number">11</div>
+          <div class="section-title-group">
+            <div class="section-title">Prominence &mdash; A Note on Presentation</div>
+            <div class="section-ref">COBS 4.2.1R</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>Prominence is one of the most frequently raised points in our reviews. A disclosure that is technically present but visually suppressed will not meet the COBS 4.2.1R requirement for communications to be fair, clear and not misleading. The following guidance should be applied across all sections above.</p>
+
+            <div class="sub-label green">11.1 Font Size</div>
+            <p>Disclaimer and disclosure language should be presented in a font size broadly comparable to surrounding body text. Relegating mandatory disclosures to small-print footers or grey footnotes reduces prominence and is generally not acceptable.</p>
+
+            <div class="sub-label green">11.2 Placement</div>
+            <p>Placement matters as much as size. Risk warnings, past performance disclaimers and benchmark disclosures should sit directly beneath or adjacent to the content they relate to &mdash; not only in a general disclaimer block at the end of the document.</p>
+
+            <div class="sub-label green">11.3 Page Layout</div>
+            <p>Where space on page 1 is limited, a second page under a &lsquo;UK Investor&rsquo; heading is an effective way to present the required UK disclosures in a legible format, without compressing the performance information on page 1.</p>
+
+            <div class="sub-label green">11.4 Colour, Weighting &amp; Positioning</div>
+            <p>Colour, weighting and positioning should not visually de-emphasise risk or regulatory content relative to branding, performance data or charts.</p>
+
+            <div class="sub-label green">11.5 Past Performance Warning</div>
+            <p>The past performance warning (&ldquo;past performance is not a reliable indicator of future results&rdquo;) should be bold and positioned directly below the past performance table or chart.</p>
+
+            <div class="callout warning">
+              <div class="callout-label">Prominence Failures We Commonly See</div>
+              <ul style="list-style:none; padding:0; margin:0;">
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#10007; UK disclosures in 6pt grey text at the base of page 2.</li>
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#10007; Risk warnings collapsed into a single paragraph at the end of the document, detached from the content they modify.</li>
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#10007; Performance figures in large bold type; risk language in thin italic grey.</li>
+                <li style="padding:5px 0; color:var(--text-body); font-size:15px;">&#10007; Brand and marketing colours overwhelming the regulatory content.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 12: Quick-Reference Checklist -->
+      <div class="section-block" id="fs-sec12">
+        <div class="section-header" onclick="toggleSection('fs-sec12')">
+          <div class="section-number">&#9745;</div>
+          <div class="section-title-group">
+            <div class="section-title">Quick-Reference Checklist</div>
+            <div class="section-ref">Interactive &mdash; Track Your Compliance</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>The checklist below summarises the items that must be addressed before a Fact Sheet can be approved for UK retail use. It is not a substitute for the detailed requirements above but provides a useful final pass before submission.</p>
+
+            <div id="fs-checklist-progress">
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="fsProgressFill" style="width:0%"></div>
+              </div>
+              <div class="progress-text" id="fsProgressText">0 of 19 items checked</div>
+            </div>
+
+            <div class="checklist-section" id="fsChecklistContainer">
+              <div class="checklist-category">Identification &amp; UK Investor Disclosures</div>
+
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleFactsheetCheck(this)"></div>
+                <span>Fact Sheet is clearly identifiable as a financial promotion (marketing communication statement).</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleFactsheetCheck(this)"></div>
+                <span>Overseas Scheme disclosure included (COBS 4.15.2R(1)) &mdash; scheme authorised overseas, not FCA-authorised.</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleFactsheetCheck(this)"></div>
+                <span>FOS disclosure included (COBS 4.15.2R(2)).</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleFactsheetCheck(this)"></div>
+                <span>FSCS disclosure included (COBS 4.15.3R).</span>
+              </div>
+
+              <div class="checklist-category">General Disclaimers &amp; Suitability</div>
+
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleFactsheetCheck(this)"></div>
+                <span>Recommendation to seek financial advice included (COBS 4.15.2R(4)).</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleFactsheetCheck(this)"></div>
+                <span>References to the Prospectus, Supplement and KIID are present and accessible.</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleFactsheetCheck(this)"></div>
+                <span>Suitability Statement present, with an indicative investment horizon and risk profile.</span>
+              </div>
+
+              <div class="checklist-category">Risks</div>
+
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleFactsheetCheck(this)"></div>
+                <span>Capital loss warning present and prominent (COBS 4.2.1R).</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleFactsheetCheck(this)"></div>
+                <span>Any fund-specific risks (leverage, derivatives, concentrated exposure) are disclosed.</span>
+              </div>
+
+              <div class="checklist-category">Past Performance</div>
+
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleFactsheetCheck(this)"></div>
+                <span>Past performance shown for at least 5 years (or full life), net of fees, with base currency clear.</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleFactsheetCheck(this)"></div>
+                <span>&ldquo;Past performance is not a reliable indicator of future results&rdquo; shown directly beneath each performance chart, bold and prominent.</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleFactsheetCheck(this)"></div>
+                <span>FCA-prescribed percentage growth table (or equivalent) covering 12-month periods included.</span>
+              </div>
+
+              <div class="checklist-category">Benchmark &amp; Fees</div>
+
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleFactsheetCheck(this)"></div>
+                <span>Benchmark identified, with purpose and active/passive management explained.</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleFactsheetCheck(this)"></div>
+                <span>OCF clearly displayed in the main body of the Fact Sheet.</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleFactsheetCheck(this)"></div>
+                <span>Any additional fees and charges are disclosed prominently.</span>
+              </div>
+
+              <div class="checklist-category">SFDR &amp; Approval</div>
+
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleFactsheetCheck(this)"></div>
+                <span>SFDR classification stated, with redirection to the Supplement/Prospectus where relevant.</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleFactsheetCheck(this)"></div>
+                <span>Approval time stamp included (Zeyro Ltd, FRN 1001386, date), with scope specified where applicable.</span>
+              </div>
+
+              <div class="checklist-category">Prominence &amp; Standalone Compliance</div>
+
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleFactsheetCheck(this)"></div>
+                <span>All UK disclosures are in a font size comparable to the rest of the document &mdash; no small-print relegation.</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleFactsheetCheck(this)"></div>
+                <span>Fact Sheet reads as a standalone compliant promotion without reliance on other documents.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div class="page" id="page-funds-prospectus">
@@ -2395,6 +2923,16 @@
     const pct = Math.round((checked / total) * 100);
     document.getElementById('webProgressFill').style.width = pct + '%';
     document.getElementById('webProgressText').textContent = checked + ' of ' + total + ' items checked';
+  }
+
+  function toggleFactsheetCheck(box) {
+    box.classList.toggle('checked');
+    box.parentElement.classList.toggle('checked-item');
+    const total = document.querySelectorAll('#fsChecklistContainer .checklist-box').length;
+    const checked = document.querySelectorAll('#fsChecklistContainer .checklist-box.checked').length;
+    const pct = Math.round((checked / total) * 100);
+    document.getElementById('fsProgressFill').style.width = pct + '%';
+    document.getElementById('fsProgressText').textContent = checked + ' of ' + total + ' items checked';
   }
 
   function toggleTheme() {
