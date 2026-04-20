@@ -949,7 +949,7 @@
           Fact Sheets <span class="nav-badge live">Live</span>
         </div>
         <div class="nav-item" data-page="funds-prospectus" onclick="showPage('funds-prospectus', this)">
-          Prospectus / Supplements <span class="nav-badge soon">Soon</span>
+          Prospectus / Supplements <span class="nav-badge live">Live</span>
         </div>
         <div class="nav-item" data-page="funds-presentations" onclick="showPage('funds-presentations', this)">
           Presentations <span class="nav-badge soon">Soon</span>
@@ -1024,7 +1024,7 @@
           </div>
           <div class="card-items">
             <span class="card-item-tag active">Fact Sheets &#10003;</span>
-            <span class="card-item-tag">Prospectus</span>
+            <span class="card-item-tag active">Prospectus &#10003;</span>
             <span class="card-item-tag">Presentations</span>
             <span class="card-item-tag">Quarterly Commentary</span>
           </div>
@@ -2823,12 +2823,458 @@
     </div>
 
     <div class="page" id="page-funds-prospectus">
-      <div class="page-header"><div class="page-label">Fund Promotions</div><div class="page-title">Prospectus / Supplements</div></div>
-      <div class="placeholder-content">
-        <div class="placeholder-icon">&#128209;</div>
-        <div class="placeholder-title">Coming Soon</div>
-        <div class="placeholder-desc">Prospectus and supplement review compliance guidance will be available here.</div>
+      <div class="page-header fade-in">
+        <div class="page-label">Fund Promotions</div>
+        <div class="page-title">Prospectus &amp; Supplements</div>
+        <p class="page-intro">
+          Preparing UK-compliant Prospectus and Supplement materials for OFR-recognised funds approved under s21 FSMA. This document supports clients preparing Prospectus and Supplement materials for UK retail distribution under the Overseas Funds Regime (OFR), where Zeyro Ltd acts as the s21 FSMA financial promotions approver. It should be read alongside our separate Fact Sheets Learning Document, as the two sets of materials share many of the same core requirements.
+        </p>
       </div>
+
+      <div class="key-points fade-in">
+        <div class="key-point"><span class="kp-icon">&#11045;</span> Prospectus, Sub-Fund Supplement and UK Country Supplement form a single promotional package</div>
+        <div class="key-point"><span class="kp-icon">&#11045;</span> Each document must still stand alone as a compliant promotion</div>
+        <div class="key-point"><span class="kp-icon">&#11045;</span> UK-specific disclosures are most efficiently held in the UK Country Supplement / Addendum</div>
+      </div>
+
+      <div class="callout rule" style="margin-bottom:28px;">
+        <div class="callout-label">A Single Promotional Package</div>
+        <p style="margin:0 0 10px; color:var(--text-body); line-height:1.8;">For UK financial promotion purposes, the Prospectus, the relevant Sub-Fund Supplement and the UK Country Supplement (sometimes called a UK Addendum) are treated as a single document. Together, they form the primary documentation pack that accompanies the fund&rsquo;s marketing to UK retail investors.</p>
+        <p style="margin:0; color:var(--text-body); line-height:1.8;">Where a required disclosure is not present in one of these documents, it should be clearly present in another, and any cross-references between them should be easy for the investor to follow.</p>
+      </div>
+
+      <div class="callout tip" style="margin-bottom:36px;">
+        <div class="callout-label">Standalone Compliance</div>
+        Despite the documents forming a single package, each must still be capable of operating as a compliant promotion in its own right. Where language refers to concepts such as &ldquo;long-term&rdquo; investment or &ldquo;typical investor profile&rdquo;, the document referencing those concepts should include sufficient detail, rather than relying on the investor to locate additional context in a KIID or on a website.
+      </div>
+
+      <!-- PLACEMENT MAP -->
+      <div class="section-block open" id="ps-placement">
+        <div class="section-header" onclick="toggleSection('ps-placement')">
+          <div class="section-number">&#128269;</div>
+          <div class="section-title-group">
+            <div class="section-title">Where Each Disclosure Sits &mdash; At a Glance</div>
+            <div class="section-ref">Placement Guidance Across the Pack</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>The table below sets out where each of the key UK disclosures is typically most appropriate within the Prospectus pack. This is guidance rather than prescription &mdash; provided the disclosures are prominent and clear, there is some flexibility in placement.</p>
+
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th class="good">Disclosure</th>
+                  <th>Preferred Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong style="color:var(--text-white)">Overseas Scheme disclosure</strong> (COBS 4.15.2R(1))</td><td>UK Country Supplement, prominently near the front</td></tr>
+                <tr><td><strong style="color:var(--text-white)">FOS / FSCS disclosures</strong> (COBS 4.15.2R(2) &amp; 4.15.3R)</td><td>UK Country Supplement</td></tr>
+                <tr><td><strong style="color:var(--text-white)">Recommendation to seek financial advice</strong> (COBS 4.15.2R(4))</td><td>UK Country Supplement</td></tr>
+                <tr><td><strong style="color:var(--text-white)">Approval time stamp</strong> (COBS 4.10.7A)</td><td>UK Country Supplement &mdash; clearly visible and prominent</td></tr>
+                <tr><td><strong style="color:var(--text-white)">Profile of a typical investor</strong></td><td>Sub-Fund Supplement, duplicated in the UK Supplement with indicative horizon</td></tr>
+                <tr><td><strong style="color:var(--text-white)">Investment objectives &amp; strategy</strong></td><td>Sub-Fund Supplement (primary); referenced in Prospectus</td></tr>
+                <tr><td><strong style="color:var(--text-white)">Risk factors (general)</strong></td><td>Prospectus</td></tr>
+                <tr><td><strong style="color:var(--text-white)">Risk factors (fund-specific)</strong></td><td>Sub-Fund Supplement</td></tr>
+                <tr><td><strong style="color:var(--text-white)">Benchmark disclosures</strong></td><td>Sub-Fund Supplement</td></tr>
+                <tr><td><strong style="color:var(--text-white)">SFDR classification</strong></td><td>Sub-Fund Supplement (primary); referenced on the Fact Sheet</td></tr>
+                <tr><td><strong style="color:var(--text-white)">Fee structure</strong> (management, performance, OCF)</td><td>Prospectus and/or Sub-Fund Supplement</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 1: Identifiable as a Financial Promotion -->
+      <div class="section-block" id="ps-sec1">
+        <div class="section-header" onclick="toggleSection('ps-sec1')">
+          <div class="section-number">1</div>
+          <div class="section-title-group">
+            <div class="section-title">Identifiable as a Financial Promotion</div>
+            <div class="section-ref">COBS 4.3.1R</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>The Prospectus pack must be clearly identifiable as a financial promotion. This may include a &lsquo;This is a marketing communication&rsquo; statement on each page of the document (COBS 4.3.1R). This applies regardless of the overall technical or legal tone of the Prospectus.</p>
+
+            <div class="callout rule">
+              <div class="callout-label">Suggested Wording</div>
+              &ldquo;This is a marketing communication.&rdquo;
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 2: UK Investor Information -->
+      <div class="section-block" id="ps-sec2">
+        <div class="section-header" onclick="toggleSection('ps-sec2')">
+          <div class="section-number">2</div>
+          <div class="section-title-group">
+            <div class="section-title">UK Investor Information</div>
+            <div class="section-ref">COBS 4.15.2R &amp; 4.15.3R</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>The following details must be made clear to UK investors. In practice, these are almost always consolidated into the UK Country Supplement, which is the most efficient place to hold UK-specific language without needing to rewrite the pan-European Prospectus itself. All disclosures must be in text size relative to that used across the promotion to meet the &lsquo;prominence&rsquo; standards.</p>
+
+            <div class="sub-label green">2.1 Overseas Scheme Disclosure (COBS 4.15.2R(1))</div>
+            <p>It must be made clear that the scheme is authorised overseas (e.g. domiciled in Luxembourg or Ireland) but is able to market in the UK under the OFR and is not FCA-authorised. This disclosure should appear early in the UK Country Supplement and be clearly legible and prominent.</p>
+
+            <div class="callout example">
+              <div class="callout-label">Suggested Wording</div>
+              &ldquo;Example SICAV is authorised and regulated in [Luxembourg by the Commission de Surveillance du Secteur Financier (CSSF)] [Ireland by the Central Bank of Ireland]. It is a recognised collective investment scheme under section 264 of the Financial Services and Markets Act 2000 but is not authorised or otherwise regulated by the Financial Conduct Authority.&rdquo;
+            </div>
+
+            <div class="sub-label green">2.2 FOS / FSCS Disclosures (COBS 4.15.2R(2) &amp; 4.15.3R)</div>
+            <p>It must be disclosed to investors that they will not be able to refer complaints against the Manager or depositary to the Financial Ombudsman Service, and that they will not be covered for reimbursement under the FSCS (unless the operator or depositary is covered under the Voluntary Jurisdiction).</p>
+
+            <div class="callout example">
+              <div class="callout-label">Suggested Wording</div>
+              &ldquo;Example SICAV, its operator and depositary are authorised and regulated in [Luxembourg/Ireland/example]. As such, it is unlikely that the Financial Ombudsman Service will be able to consider complaints about them. Additionally, investors may not be able to claim under the Financial Services Compensation Scheme in the event of their default.&rdquo;
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 3: General Disclaimers -->
+      <div class="section-block" id="ps-sec3">
+        <div class="section-header" onclick="toggleSection('ps-sec3')">
+          <div class="section-number">3</div>
+          <div class="section-title-group">
+            <div class="section-title">General Disclaimers</div>
+            <div class="section-ref">COBS 4.15.2R(4)</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <div class="sub-label green">3.1 Recommendation to Seek Financial Advice</div>
+            <p>There must be a clear recommendation that the investor should seek financial advice before making any investment decisions.</p>
+
+            <div class="callout rule">
+              <div class="callout-label">Suggested Wording</div>
+              &ldquo;Prospective investors should consult their financial adviser before making an investment decision.&rdquo;
+            </div>
+
+            <div class="sub-label green">3.2 References to the Sub-Fund Supplement &amp; KIID</div>
+            <p>Clear references to review the Sub-Fund Supplement and KIID for more information should be made, including where these documents can be accessed and in which languages.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 4: Profile of a Typical Investor -->
+      <div class="section-block" id="ps-sec4">
+        <div class="section-header" onclick="toggleSection('ps-sec4')">
+          <div class="section-number">4</div>
+          <div class="section-title-group">
+            <div class="section-title">Profile of a Typical Investor</div>
+            <div class="section-ref">Horizon &amp; Risk Tolerance</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>The Profile of a Typical Investor is most commonly found in the Sub-Fund Supplement. It must be accessible, easy to understand and free of jargon. It must address the investment time horizon and the expected risk level. Vague language such as &ldquo;long term&rdquo; is not sufficient on its own &mdash; if this means 5+ years, the document should say so.</p>
+
+            <div class="callout warning">
+              <div class="callout-label">Cross-Referencing Is Not Sufficient</div>
+              Relying on the KIID or PRIIPs document, or the website, to communicate the recommended holding period does not meet the standalone requirement. Each document in the Prospectus pack must work as a standalone financial promotion. The recommended approach is to duplicate the relevant investor profile wording in the UK Country Supplement and incorporate the indicative investment horizon there, so the disclosure is complete and contextualised for UK investors.
+            </div>
+
+            <div class="callout example">
+              <div class="callout-label">Example Wording (for inclusion in the UK Country Supplement)</div>
+              &ldquo;This Sub-Fund may be appropriate for investors who seek capital appreciation over the long term, typically meaning an investment horizon of 7 years or more. Although history has shown that shares have the potential to give better long-term returns than money market securities or bonds, they have also proved to be more volatile.&rdquo;
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 5: Risks -->
+      <div class="section-block" id="ps-sec5">
+        <div class="section-header" onclick="toggleSection('ps-sec5')">
+          <div class="section-number">5</div>
+          <div class="section-title-group">
+            <div class="section-title">Risks</div>
+            <div class="section-ref">COBS 4.2.1R</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <ul>
+              <li>A clear warning that there is a potential for loss of capital must be included. This should be visually prominent and not confined to a small-print disclaimer section.</li>
+              <li>General risk factors (e.g. market risk, liquidity risk, counterparty risk) should be set out in the Prospectus.</li>
+              <li>Fund-specific risks should be set out in the relevant Sub-Fund Supplement. If the fund invests primarily in derivatives, uses leverage, or is particularly high-risk in nature (e.g. small-cap or emerging markets exposure), these specific risks must be clearly outlined.</li>
+              <li>Risk disclosures must be given equal prominence to any benefits or performance information &mdash; returns should not be emphasised at the expense of risk.</li>
+            </ul>
+
+            <table class="comparison-table">
+              <thead><tr><th class="good">Where It Sits</th><th>What Should Be Covered</th></tr></thead>
+              <tbody>
+                <tr><td><strong style="color:var(--text-white)">Prospectus</strong></td><td>General risk factors applicable to the umbrella / all sub-funds (market, liquidity, counterparty, currency, operational).</td></tr>
+                <tr><td><strong style="color:var(--text-white)">Sub-Fund Supplement</strong></td><td>Fund-specific risks: leverage, derivatives use, concentration, emerging markets, small cap, thematic exposures, etc.</td></tr>
+                <tr><td><strong style="color:var(--text-white)">UK Country Supplement</strong></td><td>Capital loss warning for UK retail investors, positioned prominently near the front.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 6: Benchmark Disclosures -->
+      <div class="section-block" id="ps-sec6">
+        <div class="section-header" onclick="toggleSection('ps-sec6')">
+          <div class="section-number">6</div>
+          <div class="section-title-group">
+            <div class="section-title">Benchmark Disclosures</div>
+            <div class="section-ref">COBS 4.5</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>Where a benchmark is used at the sub-fund level, it must be clearly identified along with a summary of how it is used (target, constraining, or comparator benchmark). Where the fund is actively managed, this should be made explicit alongside the purpose of the benchmark (COBS 4.5). Benchmark disclosures are most efficiently held in the Sub-Fund Supplement, as they are fund-specific.</p>
+
+            <div class="callout example">
+              <div class="callout-label">Example Wording</div>
+              &ldquo;The Sub-Fund is actively managed and references [benchmark name] for asset allocation, risk measurement and comparative purposes.&rdquo;
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 7: Fee Information -->
+      <div class="section-block" id="ps-sec7">
+        <div class="section-header" onclick="toggleSection('ps-sec7')">
+          <div class="section-number">7</div>
+          <div class="section-title-group">
+            <div class="section-title">Fee Information</div>
+            <div class="section-ref">Transparency of Charges</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>All disclosures regarding fees, commissions and other charges must be sufficiently prominent within the relevant document. Investment management fees, performance fees, subscription/redemption fees and any other material charges should be set out in the Prospectus or Sub-Fund Supplement (whichever is more appropriate for the type of fee) and should not be buried within dense fee schedules that obscure their impact on returns.</p>
+
+            <div class="callout tip">
+              <div class="callout-label">Complex Fee Structures</div>
+              Where fee structures are layered or complex (e.g. performance fees with high-water marks), the explanation of how fees apply should be accessible enough for a retail investor to follow.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 8: SFDR Disclosures -->
+      <div class="section-block" id="ps-sec8">
+        <div class="section-header" onclick="toggleSection('ps-sec8')">
+          <div class="section-number">8</div>
+          <div class="section-title-group">
+            <div class="section-title">SFDR Article 6, 8 and 9 Disclosures</div>
+            <div class="section-ref">Sustainability Classification</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>For funds that are classified as Article 6, Article 8 or Article 9 under SFDR, this classification must be clearly identified in the Sub-Fund Supplement. Where the fund promotes environmental or social characteristics (Article 8) or has sustainable investment as its objective (Article 9), the supplement should explain how those characteristics or objectives are pursued through the investment strategy.</p>
+
+            <div class="callout example">
+              <div class="callout-label">Example Wording for an Article 8 Fund</div>
+              &ldquo;The Fund promotes environmental and social characteristics, but does not have sustainable investment as an objective. The Fund therefore falls under the category of Article 8 SFDR.&rdquo;
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 9: Approval Time Stamp -->
+      <div class="section-block" id="ps-sec9">
+        <div class="section-header" onclick="toggleSection('ps-sec9')">
+          <div class="section-number">9</div>
+          <div class="section-title-group">
+            <div class="section-title">Approval Time Stamp</div>
+            <div class="section-ref">COBS 4.10.7A</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>As the Prospectus pack is approved by a section 21 financial promotions approver, it must include the approval time stamp prominently. A statement within the UK Country Supplement is sufficient here, provided it is clearly visible and prominently displayed.</p>
+
+            <div class="callout rule">
+              <div class="callout-label">Suggested Wording (Standard)</div>
+              &ldquo;This financial promotion has been approved by Zeyro Ltd (FRN 1001386) on [Date].&rdquo;
+            </div>
+
+            <div class="sub-label green">9.1 Scoped Approval for Umbrella Structures</div>
+            <p>Where the Prospectus covers a SICAV or umbrella structure that contains sub-funds for which Zeyro does not provide approval services (for example, institutional-only sub-funds, or sub-funds not marketed in the UK), the approval statement must make this scope clear. A blanket approval statement over the whole Prospectus would be misleading.</p>
+
+            <div class="callout rule">
+              <div class="callout-label">Suggested Wording (Scoped)</div>
+              &ldquo;This financial promotion has been approved by Zeyro Ltd (FRN 1001386) on [Date] with respect to the following funds only:&rdquo;
+              <ul style="list-style:none; padding:0; margin:12px 0 0;">
+                <li style="padding:4px 0; color:var(--text-body); font-size:15px;">&#8250; [Sub-Fund 1]</li>
+                <li style="padding:4px 0; color:var(--text-body); font-size:15px;">&#8250; [Sub-Fund 2]</li>
+                <li style="padding:4px 0; color:var(--text-body); font-size:15px;">&#8250; [Sub-Fund 3]</li>
+                <li style="padding:4px 0; color:var(--text-body); font-size:15px;">&#8250; [continue list as applicable]</li>
+              </ul>
+            </div>
+
+            <div class="callout tip">
+              <div class="callout-label">Treatment of Updates</div>
+              In many cases, subsequent updates to the Prospectus or Supplements will be treated as a variation of the original promotion and will not require a new approval time stamp. However, any material update should be shared with your reviewer, and in some cases a fresh review will be needed. Non-material updates (e.g. typographical corrections) can generally be handled without re-approval.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 10: Prominence -->
+      <div class="section-block" id="ps-sec10">
+        <div class="section-header" onclick="toggleSection('ps-sec10')">
+          <div class="section-number">10</div>
+          <div class="section-title-group">
+            <div class="section-title">Prominence &mdash; A Note on Presentation</div>
+            <div class="section-ref">COBS 4.2.1R</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>Prominence requirements apply to the Prospectus pack in the same way they apply to Fact Sheets. A disclosure that is technically present but visually suppressed will not meet the COBS 4.2.1R requirement for communications to be fair, clear and not misleading.</p>
+
+            <div class="sub-label green">10.1 Font Size</div>
+            <p>Disclaimer and disclosure language should be presented in a font size broadly comparable to surrounding body text. This applies even in the Prospectus, where dense drafting can otherwise make it easy to relegate key disclosures to small print.</p>
+
+            <div class="sub-label green">10.2 Signposting the UK Country Supplement</div>
+            <p>The UK Country Supplement should be positioned and labelled in a way that makes it easy for UK investors to locate &mdash; for example, signposting from the Prospectus table of contents, and a clear heading at the start of the supplement itself.</p>
+
+            <div class="sub-label green">10.3 Placement of UK-Specific Disclosures</div>
+            <p>Placement matters: UK-specific disclosures should appear early in the UK Country Supplement rather than at the very end, so that an investor reading the document is exposed to the relevant warnings before reading about subscription mechanics or fees.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 11: Quick-Reference Checklist -->
+      <div class="section-block" id="ps-sec11">
+        <div class="section-header" onclick="toggleSection('ps-sec11')">
+          <div class="section-number">&#9745;</div>
+          <div class="section-title-group">
+            <div class="section-title">Quick-Reference Checklist</div>
+            <div class="section-ref">Interactive &mdash; Track Your Compliance</div>
+          </div>
+          <div class="section-toggle">&#9662;</div>
+        </div>
+        <div class="section-content">
+          <div class="section-body">
+            <p>The checklist below summarises the items that must be addressed before the Prospectus pack can be approved for UK retail use. It is not a substitute for the detailed requirements above but provides a useful final pass before submission.</p>
+
+            <div id="ps-checklist-progress">
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="psProgressFill" style="width:0%"></div>
+              </div>
+              <div class="progress-text" id="psProgressText">0 of 18 items checked</div>
+            </div>
+
+            <div class="checklist-section" id="psChecklistContainer">
+              <div class="checklist-category">Identification &amp; UK Supplement</div>
+
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleProspectusCheck(this)"></div>
+                <span>Prospectus pack is clearly identifiable as a financial promotion.</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleProspectusCheck(this)"></div>
+                <span>UK Country Supplement / UK Addendum exists and is clearly signposted.</span>
+              </div>
+
+              <div class="checklist-category">UK Investor Disclosures</div>
+
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleProspectusCheck(this)"></div>
+                <span>Overseas Scheme disclosure included in the UK Supplement (COBS 4.15.2R(1)) &mdash; scheme authorised overseas, not FCA-authorised.</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleProspectusCheck(this)"></div>
+                <span>FOS disclosure included in the UK Supplement (COBS 4.15.2R(2)).</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleProspectusCheck(this)"></div>
+                <span>FSCS disclosure included in the UK Supplement (COBS 4.15.3R).</span>
+              </div>
+
+              <div class="checklist-category">General Disclaimers &amp; Investor Profile</div>
+
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleProspectusCheck(this)"></div>
+                <span>Recommendation to seek financial advice included (COBS 4.15.2R(4)).</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleProspectusCheck(this)"></div>
+                <span>Clear references to the Sub-Fund Supplement and KIID, including where and in which languages they can be accessed.</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleProspectusCheck(this)"></div>
+                <span>Profile of a Typical Investor present in the Sub-Fund Supplement and duplicated in the UK Supplement, with an indicative investment horizon.</span>
+              </div>
+
+              <div class="checklist-category">Risks</div>
+
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleProspectusCheck(this)"></div>
+                <span>General risk factors set out in the Prospectus.</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleProspectusCheck(this)"></div>
+                <span>Fund-specific risks set out in each Sub-Fund Supplement.</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleProspectusCheck(this)"></div>
+                <span>Capital loss warning present and prominent (COBS 4.2.1R).</span>
+              </div>
+
+              <div class="checklist-category">Benchmark, Fees &amp; SFDR</div>
+
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleProspectusCheck(this)"></div>
+                <span>Benchmark identified at sub-fund level, with purpose and active/passive management explained.</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleProspectusCheck(this)"></div>
+                <span>Fee structure (management, performance, OCF, subscription/redemption) clearly disclosed.</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleProspectusCheck(this)"></div>
+                <span>SFDR classification stated in the Sub-Fund Supplement, with supporting explanation.</span>
+              </div>
+
+              <div class="checklist-category">Approval &amp; Prominence</div>
+
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleProspectusCheck(this)"></div>
+                <span>Approval time stamp included (Zeyro Ltd, FRN 1001386, date) in the UK Supplement.</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleProspectusCheck(this)"></div>
+                <span>Where the Prospectus is an umbrella, approval statement specifies the sub-funds it covers.</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleProspectusCheck(this)"></div>
+                <span>All UK disclosures are in a font size comparable to the rest of the document &mdash; no small-print relegation.</span>
+              </div>
+              <div class="checklist-item">
+                <div class="checklist-box" onclick="toggleProspectusCheck(this)"></div>
+                <span>Each document in the pack reads as a standalone compliant promotion without reliance on the KIID, PRIIPs or website.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div class="page" id="page-funds-presentations">
@@ -2933,6 +3379,16 @@
     const pct = Math.round((checked / total) * 100);
     document.getElementById('fsProgressFill').style.width = pct + '%';
     document.getElementById('fsProgressText').textContent = checked + ' of ' + total + ' items checked';
+  }
+
+  function toggleProspectusCheck(box) {
+    box.classList.toggle('checked');
+    box.parentElement.classList.toggle('checked-item');
+    const total = document.querySelectorAll('#psChecklistContainer .checklist-box').length;
+    const checked = document.querySelectorAll('#psChecklistContainer .checklist-box.checked').length;
+    const pct = Math.round((checked / total) * 100);
+    document.getElementById('psProgressFill').style.width = pct + '%';
+    document.getElementById('psProgressText').textContent = checked + ' of ' + total + ' items checked';
   }
 
   function toggleTheme() {
